@@ -5,13 +5,13 @@
     <id column="ProductId" jdbcType="INTEGER" property="productid" />
     <result column="CategoryId" jdbcType="INTEGER" property="categoryid" />
     <result column="TypeId" jdbcType="INTEGER" property="typeid" />
-    <result column="ProductName" jdbcType="NVARCHAR" property="productname" />
-    <result column="ProductCode" jdbcType="NVARCHAR" property="productcode" />
-    <result column="ShortDescription" jdbcType="NVARCHAR" property="shortdescription" />
-    <result column="Unit" jdbcType="NVARCHAR" property="unit" />
-    <result column="Title" jdbcType="NVARCHAR" property="title" />
-    <result column="Meta_Description" jdbcType="NVARCHAR" property="metaDescription" />
-    <result column="Meta_Keywords" jdbcType="NVARCHAR" property="metaKeywords" />
+    <result column="ProductName" jdbcType="VARCHAR" property="productname" />
+    <result column="ProductCode" jdbcType="VARCHAR" property="productcode" />
+    <result column="ShortDescription" jdbcType="VARCHAR" property="shortdescription" />
+    <result column="Unit" jdbcType="VARCHAR" property="unit" />
+    <result column="Title" jdbcType="VARCHAR" property="title" />
+    <result column="Meta_Description" jdbcType="VARCHAR" property="metaDescription" />
+    <result column="Meta_Keywords" jdbcType="VARCHAR" property="metaKeywords" />
     <result column="SaleStatus" jdbcType="INTEGER" property="salestatus" />
     <result column="AddedDate" jdbcType="TIMESTAMP" property="addeddate" />
     <result column="UpdateDate" jdbcType="TIMESTAMP" property="updatedate" />
@@ -19,27 +19,27 @@
     <result column="SaleCounts" jdbcType="INTEGER" property="salecounts" />
     <result column="ShowSaleCounts" jdbcType="INTEGER" property="showsalecounts" />
     <result column="DisplaySequence" jdbcType="INTEGER" property="displaysequence" />
-    <result column="ImageUrl1" jdbcType="NVARCHAR" property="imageurl1" />
-    <result column="ImageUrl2" jdbcType="NVARCHAR" property="imageurl2" />
-    <result column="ImageUrl3" jdbcType="NVARCHAR" property="imageurl3" />
-    <result column="ImageUrl4" jdbcType="NVARCHAR" property="imageurl4" />
-    <result column="ImageUrl5" jdbcType="NVARCHAR" property="imageurl5" />
-    <result column="ThumbnailUrl40" jdbcType="NVARCHAR" property="thumbnailurl40" />
-    <result column="ThumbnailUrl60" jdbcType="NVARCHAR" property="thumbnailurl60" />
-    <result column="ThumbnailUrl100" jdbcType="NVARCHAR" property="thumbnailurl100" />
-    <result column="ThumbnailUrl160" jdbcType="NVARCHAR" property="thumbnailurl160" />
-    <result column="ThumbnailUrl180" jdbcType="NVARCHAR" property="thumbnailurl180" />
-    <result column="ThumbnailUrl220" jdbcType="NVARCHAR" property="thumbnailurl220" />
-    <result column="ThumbnailUrl310" jdbcType="NVARCHAR" property="thumbnailurl310" />
-    <result column="ThumbnailUrl410" jdbcType="NVARCHAR" property="thumbnailurl410" />
+    <result column="ImageUrl1" jdbcType="VARCHAR" property="imageurl1" />
+    <result column="ImageUrl2" jdbcType="VARCHAR" property="imageurl2" />
+    <result column="ImageUrl3" jdbcType="VARCHAR" property="imageurl3" />
+    <result column="ImageUrl4" jdbcType="VARCHAR" property="imageurl4" />
+    <result column="ImageUrl5" jdbcType="VARCHAR" property="imageurl5" />
+    <result column="ThumbnailUrl40" jdbcType="VARCHAR" property="thumbnailurl40" />
+    <result column="ThumbnailUrl60" jdbcType="VARCHAR" property="thumbnailurl60" />
+    <result column="ThumbnailUrl100" jdbcType="VARCHAR" property="thumbnailurl100" />
+    <result column="ThumbnailUrl160" jdbcType="VARCHAR" property="thumbnailurl160" />
+    <result column="ThumbnailUrl180" jdbcType="VARCHAR" property="thumbnailurl180" />
+    <result column="ThumbnailUrl220" jdbcType="VARCHAR" property="thumbnailurl220" />
+    <result column="ThumbnailUrl310" jdbcType="VARCHAR" property="thumbnailurl310" />
+    <result column="ThumbnailUrl410" jdbcType="VARCHAR" property="thumbnailurl410" />
     <result column="MarketPrice" jdbcType="DECIMAL" property="marketprice" />
     <result column="BrandId" jdbcType="INTEGER" property="brandid" />
-    <result column="MainCategoryPath" jdbcType="NVARCHAR" property="maincategorypath" />
-    <result column="ExtendCategoryPath" jdbcType="NVARCHAR" property="extendcategorypath" />
-    <result column="ExtendCategoryPath1" jdbcType="NVARCHAR" property="extendcategorypath1" />
-    <result column="ExtendCategoryPath2" jdbcType="NVARCHAR" property="extendcategorypath2" />
-    <result column="ExtendCategoryPath3" jdbcType="NVARCHAR" property="extendcategorypath3" />
-    <result column="ExtendCategoryPath4" jdbcType="NVARCHAR" property="extendcategorypath4" />
+    <result column="MainCategoryPath" jdbcType="VARCHAR" property="maincategorypath" />
+    <result column="ExtendCategoryPath" jdbcType="VARCHAR" property="extendcategorypath" />
+    <result column="ExtendCategoryPath1" jdbcType="VARCHAR" property="extendcategorypath1" />
+    <result column="ExtendCategoryPath2" jdbcType="VARCHAR" property="extendcategorypath2" />
+    <result column="ExtendCategoryPath3" jdbcType="VARCHAR" property="extendcategorypath3" />
+    <result column="ExtendCategoryPath4" jdbcType="VARCHAR" property="extendcategorypath4" />
     <result column="HasSKU" jdbcType="BIT" property="hassku" />
     <result column="IsfreeShipping" jdbcType="BIT" property="isfreeshipping" />
     <result column="TaobaoProductId" jdbcType="BIGINT" property="taobaoproductid" />
@@ -51,14 +51,14 @@
     <result column="ThreeLevelDeduct" jdbcType="DECIMAL" property="threeleveldeduct" />
     <result column="SupplierId" jdbcType="INTEGER" property="supplierid" />
     <result column="AuditStatus" jdbcType="TINYINT" property="auditstatus" />
-    <result column="AuditReson" jdbcType="NVARCHAR" property="auditreson" />
+    <result column="AuditReson" jdbcType="VARCHAR" property="auditreson" />
     <result column="Volume" jdbcType="DECIMAL" property="volume" />
     <result column="TenantID" jdbcType="INTEGER" property="tenantid" />
     <result column="guid" jdbcType="VARCHAR" property="guid" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.ManJiaSonPort.sync.dto.HishopProductsWithBLOBs">
-    <result column="Description" jdbcType="LONGNVARCHAR" property="description" />
-    <result column="MobbileDescription" jdbcType="LONGNVARCHAR" property="mobbiledescription" />
+    <result column="Description" jdbcType="LONGVARCHAR" property="description" />
+    <result column="MobbileDescription" jdbcType="LONGVARCHAR" property="mobbiledescription" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -202,25 +202,25 @@
       TenantID, guid, Description, 
       MobbileDescription)
     values (#{productid,jdbcType=INTEGER}, #{categoryid,jdbcType=INTEGER}, #{typeid,jdbcType=INTEGER}, 
-      #{productname,jdbcType=NVARCHAR}, #{productcode,jdbcType=NVARCHAR}, #{shortdescription,jdbcType=NVARCHAR}, 
-      #{unit,jdbcType=NVARCHAR}, #{title,jdbcType=NVARCHAR}, #{metaDescription,jdbcType=NVARCHAR}, 
-      #{metaKeywords,jdbcType=NVARCHAR}, #{salestatus,jdbcType=INTEGER}, #{addeddate,jdbcType=TIMESTAMP}, 
+      #{productname,jdbcType=VARCHAR}, #{productcode,jdbcType=VARCHAR}, #{shortdescription,jdbcType=VARCHAR}, 
+      #{unit,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{metaDescription,jdbcType=VARCHAR}, 
+      #{metaKeywords,jdbcType=VARCHAR}, #{salestatus,jdbcType=INTEGER}, #{addeddate,jdbcType=TIMESTAMP}, 
       #{updatedate,jdbcType=TIMESTAMP}, #{visticounts,jdbcType=INTEGER}, #{salecounts,jdbcType=INTEGER}, 
-      #{showsalecounts,jdbcType=INTEGER}, #{displaysequence,jdbcType=INTEGER}, #{imageurl1,jdbcType=NVARCHAR}, 
-      #{imageurl2,jdbcType=NVARCHAR}, #{imageurl3,jdbcType=NVARCHAR}, #{imageurl4,jdbcType=NVARCHAR}, 
-      #{imageurl5,jdbcType=NVARCHAR}, #{thumbnailurl40,jdbcType=NVARCHAR}, #{thumbnailurl60,jdbcType=NVARCHAR}, 
-      #{thumbnailurl100,jdbcType=NVARCHAR}, #{thumbnailurl160,jdbcType=NVARCHAR}, #{thumbnailurl180,jdbcType=NVARCHAR}, 
-      #{thumbnailurl220,jdbcType=NVARCHAR}, #{thumbnailurl310,jdbcType=NVARCHAR}, #{thumbnailurl410,jdbcType=NVARCHAR}, 
-      #{marketprice,jdbcType=DECIMAL}, #{brandid,jdbcType=INTEGER}, #{maincategorypath,jdbcType=NVARCHAR}, 
-      #{extendcategorypath,jdbcType=NVARCHAR}, #{extendcategorypath1,jdbcType=NVARCHAR}, 
-      #{extendcategorypath2,jdbcType=NVARCHAR}, #{extendcategorypath3,jdbcType=NVARCHAR}, 
-      #{extendcategorypath4,jdbcType=NVARCHAR}, #{hassku,jdbcType=BIT}, #{isfreeshipping,jdbcType=BIT}, 
+      #{showsalecounts,jdbcType=INTEGER}, #{displaysequence,jdbcType=INTEGER}, #{imageurl1,jdbcType=VARCHAR}, 
+      #{imageurl2,jdbcType=VARCHAR}, #{imageurl3,jdbcType=VARCHAR}, #{imageurl4,jdbcType=VARCHAR}, 
+      #{imageurl5,jdbcType=VARCHAR}, #{thumbnailurl40,jdbcType=VARCHAR}, #{thumbnailurl60,jdbcType=VARCHAR}, 
+      #{thumbnailurl100,jdbcType=VARCHAR}, #{thumbnailurl160,jdbcType=VARCHAR}, #{thumbnailurl180,jdbcType=VARCHAR}, 
+      #{thumbnailurl220,jdbcType=VARCHAR}, #{thumbnailurl310,jdbcType=VARCHAR}, #{thumbnailurl410,jdbcType=VARCHAR}, 
+      #{marketprice,jdbcType=DECIMAL}, #{brandid,jdbcType=INTEGER}, #{maincategorypath,jdbcType=VARCHAR}, 
+      #{extendcategorypath,jdbcType=VARCHAR}, #{extendcategorypath1,jdbcType=VARCHAR}, 
+      #{extendcategorypath2,jdbcType=VARCHAR}, #{extendcategorypath3,jdbcType=VARCHAR}, 
+      #{extendcategorypath4,jdbcType=VARCHAR}, #{hassku,jdbcType=BIT}, #{isfreeshipping,jdbcType=BIT}, 
       #{taobaoproductid,jdbcType=BIGINT}, #{referraldeduct,jdbcType=DECIMAL}, #{submemberdeduct,jdbcType=DECIMAL}, 
       #{subreferraldeduct,jdbcType=DECIMAL}, #{shippingtemplateid,jdbcType=INTEGER}, 
       #{secondleveldeduct,jdbcType=DECIMAL}, #{threeleveldeduct,jdbcType=DECIMAL}, #{supplierid,jdbcType=INTEGER}, 
-      #{auditstatus,jdbcType=TINYINT}, #{auditreson,jdbcType=NVARCHAR}, #{volume,jdbcType=DECIMAL}, 
-      #{tenantid,jdbcType=INTEGER}, #{guid,jdbcType=VARCHAR}, #{description,jdbcType=LONGNVARCHAR}, 
-      #{mobbiledescription,jdbcType=LONGNVARCHAR})
+      #{auditstatus,jdbcType=TINYINT}, #{auditreson,jdbcType=VARCHAR}, #{volume,jdbcType=DECIMAL}, 
+      #{tenantid,jdbcType=INTEGER}, #{guid,jdbcType=VARCHAR}, #{description,jdbcType=LONGVARCHAR}, 
+      #{mobbiledescription,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.ManJiaSonPort.sync.dto.HishopProductsWithBLOBs">
     insert into Hishop_Products
@@ -402,25 +402,25 @@
         #{typeid,jdbcType=INTEGER},
       </if>
       <if test="productname != null">
-        #{productname,jdbcType=NVARCHAR},
+        #{productname,jdbcType=VARCHAR},
       </if>
       <if test="productcode != null">
-        #{productcode,jdbcType=NVARCHAR},
+        #{productcode,jdbcType=VARCHAR},
       </if>
       <if test="shortdescription != null">
-        #{shortdescription,jdbcType=NVARCHAR},
+        #{shortdescription,jdbcType=VARCHAR},
       </if>
       <if test="unit != null">
-        #{unit,jdbcType=NVARCHAR},
+        #{unit,jdbcType=VARCHAR},
       </if>
       <if test="title != null">
-        #{title,jdbcType=NVARCHAR},
+        #{title,jdbcType=VARCHAR},
       </if>
       <if test="metaDescription != null">
-        #{metaDescription,jdbcType=NVARCHAR},
+        #{metaDescription,jdbcType=VARCHAR},
       </if>
       <if test="metaKeywords != null">
-        #{metaKeywords,jdbcType=NVARCHAR},
+        #{metaKeywords,jdbcType=VARCHAR},
       </if>
       <if test="salestatus != null">
         #{salestatus,jdbcType=INTEGER},
@@ -444,43 +444,43 @@
         #{displaysequence,jdbcType=INTEGER},
       </if>
       <if test="imageurl1 != null">
-        #{imageurl1,jdbcType=NVARCHAR},
+        #{imageurl1,jdbcType=VARCHAR},
       </if>
       <if test="imageurl2 != null">
-        #{imageurl2,jdbcType=NVARCHAR},
+        #{imageurl2,jdbcType=VARCHAR},
       </if>
       <if test="imageurl3 != null">
-        #{imageurl3,jdbcType=NVARCHAR},
+        #{imageurl3,jdbcType=VARCHAR},
       </if>
       <if test="imageurl4 != null">
-        #{imageurl4,jdbcType=NVARCHAR},
+        #{imageurl4,jdbcType=VARCHAR},
       </if>
       <if test="imageurl5 != null">
-        #{imageurl5,jdbcType=NVARCHAR},
+        #{imageurl5,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl40 != null">
-        #{thumbnailurl40,jdbcType=NVARCHAR},
+        #{thumbnailurl40,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl60 != null">
-        #{thumbnailurl60,jdbcType=NVARCHAR},
+        #{thumbnailurl60,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl100 != null">
-        #{thumbnailurl100,jdbcType=NVARCHAR},
+        #{thumbnailurl100,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl160 != null">
-        #{thumbnailurl160,jdbcType=NVARCHAR},
+        #{thumbnailurl160,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl180 != null">
-        #{thumbnailurl180,jdbcType=NVARCHAR},
+        #{thumbnailurl180,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl220 != null">
-        #{thumbnailurl220,jdbcType=NVARCHAR},
+        #{thumbnailurl220,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl310 != null">
-        #{thumbnailurl310,jdbcType=NVARCHAR},
+        #{thumbnailurl310,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl410 != null">
-        #{thumbnailurl410,jdbcType=NVARCHAR},
+        #{thumbnailurl410,jdbcType=VARCHAR},
       </if>
       <if test="marketprice != null">
         #{marketprice,jdbcType=DECIMAL},
@@ -489,22 +489,22 @@
         #{brandid,jdbcType=INTEGER},
       </if>
       <if test="maincategorypath != null">
-        #{maincategorypath,jdbcType=NVARCHAR},
+        #{maincategorypath,jdbcType=VARCHAR},
       </if>
       <if test="extendcategorypath != null">
-        #{extendcategorypath,jdbcType=NVARCHAR},
+        #{extendcategorypath,jdbcType=VARCHAR},
       </if>
       <if test="extendcategorypath1 != null">
-        #{extendcategorypath1,jdbcType=NVARCHAR},
+        #{extendcategorypath1,jdbcType=VARCHAR},
       </if>
       <if test="extendcategorypath2 != null">
-        #{extendcategorypath2,jdbcType=NVARCHAR},
+        #{extendcategorypath2,jdbcType=VARCHAR},
       </if>
       <if test="extendcategorypath3 != null">
-        #{extendcategorypath3,jdbcType=NVARCHAR},
+        #{extendcategorypath3,jdbcType=VARCHAR},
       </if>
       <if test="extendcategorypath4 != null">
-        #{extendcategorypath4,jdbcType=NVARCHAR},
+        #{extendcategorypath4,jdbcType=VARCHAR},
       </if>
       <if test="hassku != null">
         #{hassku,jdbcType=BIT},
@@ -540,7 +540,7 @@
         #{auditstatus,jdbcType=TINYINT},
       </if>
       <if test="auditreson != null">
-        #{auditreson,jdbcType=NVARCHAR},
+        #{auditreson,jdbcType=VARCHAR},
       </if>
       <if test="volume != null">
         #{volume,jdbcType=DECIMAL},
@@ -552,10 +552,10 @@
         #{guid,jdbcType=VARCHAR},
       </if>
       <if test="description != null">
-        #{description,jdbcType=LONGNVARCHAR},
+        #{description,jdbcType=LONGVARCHAR},
       </if>
       <if test="mobbiledescription != null">
-        #{mobbiledescription,jdbcType=LONGNVARCHAR},
+        #{mobbiledescription,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -578,25 +578,25 @@
         TypeId = #{record.typeid,jdbcType=INTEGER},
       </if>
       <if test="record.productname != null">
-        ProductName = #{record.productname,jdbcType=NVARCHAR},
+        ProductName = #{record.productname,jdbcType=VARCHAR},
       </if>
       <if test="record.productcode != null">
-        ProductCode = #{record.productcode,jdbcType=NVARCHAR},
+        ProductCode = #{record.productcode,jdbcType=VARCHAR},
       </if>
       <if test="record.shortdescription != null">
-        ShortDescription = #{record.shortdescription,jdbcType=NVARCHAR},
+        ShortDescription = #{record.shortdescription,jdbcType=VARCHAR},
       </if>
       <if test="record.unit != null">
-        Unit = #{record.unit,jdbcType=NVARCHAR},
+        Unit = #{record.unit,jdbcType=VARCHAR},
       </if>
       <if test="record.title != null">
-        Title = #{record.title,jdbcType=NVARCHAR},
+        Title = #{record.title,jdbcType=VARCHAR},
       </if>
       <if test="record.metaDescription != null">
-        Meta_Description = #{record.metaDescription,jdbcType=NVARCHAR},
+        Meta_Description = #{record.metaDescription,jdbcType=VARCHAR},
       </if>
       <if test="record.metaKeywords != null">
-        Meta_Keywords = #{record.metaKeywords,jdbcType=NVARCHAR},
+        Meta_Keywords = #{record.metaKeywords,jdbcType=VARCHAR},
       </if>
       <if test="record.salestatus != null">
         SaleStatus = #{record.salestatus,jdbcType=INTEGER},
@@ -620,43 +620,43 @@
         DisplaySequence = #{record.displaysequence,jdbcType=INTEGER},
       </if>
       <if test="record.imageurl1 != null">
-        ImageUrl1 = #{record.imageurl1,jdbcType=NVARCHAR},
+        ImageUrl1 = #{record.imageurl1,jdbcType=VARCHAR},
       </if>
       <if test="record.imageurl2 != null">
-        ImageUrl2 = #{record.imageurl2,jdbcType=NVARCHAR},
+        ImageUrl2 = #{record.imageurl2,jdbcType=VARCHAR},
       </if>
       <if test="record.imageurl3 != null">
-        ImageUrl3 = #{record.imageurl3,jdbcType=NVARCHAR},
+        ImageUrl3 = #{record.imageurl3,jdbcType=VARCHAR},
       </if>
       <if test="record.imageurl4 != null">
-        ImageUrl4 = #{record.imageurl4,jdbcType=NVARCHAR},
+        ImageUrl4 = #{record.imageurl4,jdbcType=VARCHAR},
       </if>
       <if test="record.imageurl5 != null">
-        ImageUrl5 = #{record.imageurl5,jdbcType=NVARCHAR},
+        ImageUrl5 = #{record.imageurl5,jdbcType=VARCHAR},
       </if>
       <if test="record.thumbnailurl40 != null">
-        ThumbnailUrl40 = #{record.thumbnailurl40,jdbcType=NVARCHAR},
+        ThumbnailUrl40 = #{record.thumbnailurl40,jdbcType=VARCHAR},
       </if>
       <if test="record.thumbnailurl60 != null">
-        ThumbnailUrl60 = #{record.thumbnailurl60,jdbcType=NVARCHAR},
+        ThumbnailUrl60 = #{record.thumbnailurl60,jdbcType=VARCHAR},
       </if>
       <if test="record.thumbnailurl100 != null">
-        ThumbnailUrl100 = #{record.thumbnailurl100,jdbcType=NVARCHAR},
+        ThumbnailUrl100 = #{record.thumbnailurl100,jdbcType=VARCHAR},
       </if>
       <if test="record.thumbnailurl160 != null">
-        ThumbnailUrl160 = #{record.thumbnailurl160,jdbcType=NVARCHAR},
+        ThumbnailUrl160 = #{record.thumbnailurl160,jdbcType=VARCHAR},
       </if>
       <if test="record.thumbnailurl180 != null">
-        ThumbnailUrl180 = #{record.thumbnailurl180,jdbcType=NVARCHAR},
+        ThumbnailUrl180 = #{record.thumbnailurl180,jdbcType=VARCHAR},
       </if>
       <if test="record.thumbnailurl220 != null">
-        ThumbnailUrl220 = #{record.thumbnailurl220,jdbcType=NVARCHAR},
+        ThumbnailUrl220 = #{record.thumbnailurl220,jdbcType=VARCHAR},
       </if>
       <if test="record.thumbnailurl310 != null">
-        ThumbnailUrl310 = #{record.thumbnailurl310,jdbcType=NVARCHAR},
+        ThumbnailUrl310 = #{record.thumbnailurl310,jdbcType=VARCHAR},
       </if>
       <if test="record.thumbnailurl410 != null">
-        ThumbnailUrl410 = #{record.thumbnailurl410,jdbcType=NVARCHAR},
+        ThumbnailUrl410 = #{record.thumbnailurl410,jdbcType=VARCHAR},
       </if>
       <if test="record.marketprice != null">
         MarketPrice = #{record.marketprice,jdbcType=DECIMAL},
@@ -665,22 +665,22 @@
         BrandId = #{record.brandid,jdbcType=INTEGER},
       </if>
       <if test="record.maincategorypath != null">
-        MainCategoryPath = #{record.maincategorypath,jdbcType=NVARCHAR},
+        MainCategoryPath = #{record.maincategorypath,jdbcType=VARCHAR},
       </if>
       <if test="record.extendcategorypath != null">
-        ExtendCategoryPath = #{record.extendcategorypath,jdbcType=NVARCHAR},
+        ExtendCategoryPath = #{record.extendcategorypath,jdbcType=VARCHAR},
       </if>
       <if test="record.extendcategorypath1 != null">
-        ExtendCategoryPath1 = #{record.extendcategorypath1,jdbcType=NVARCHAR},
+        ExtendCategoryPath1 = #{record.extendcategorypath1,jdbcType=VARCHAR},
       </if>
       <if test="record.extendcategorypath2 != null">
-        ExtendCategoryPath2 = #{record.extendcategorypath2,jdbcType=NVARCHAR},
+        ExtendCategoryPath2 = #{record.extendcategorypath2,jdbcType=VARCHAR},
       </if>
       <if test="record.extendcategorypath3 != null">
-        ExtendCategoryPath3 = #{record.extendcategorypath3,jdbcType=NVARCHAR},
+        ExtendCategoryPath3 = #{record.extendcategorypath3,jdbcType=VARCHAR},
       </if>
       <if test="record.extendcategorypath4 != null">
-        ExtendCategoryPath4 = #{record.extendcategorypath4,jdbcType=NVARCHAR},
+        ExtendCategoryPath4 = #{record.extendcategorypath4,jdbcType=VARCHAR},
       </if>
       <if test="record.hassku != null">
         HasSKU = #{record.hassku,jdbcType=BIT},
@@ -716,7 +716,7 @@
         AuditStatus = #{record.auditstatus,jdbcType=TINYINT},
       </if>
       <if test="record.auditreson != null">
-        AuditReson = #{record.auditreson,jdbcType=NVARCHAR},
+        AuditReson = #{record.auditreson,jdbcType=VARCHAR},
       </if>
       <if test="record.volume != null">
         Volume = #{record.volume,jdbcType=DECIMAL},
@@ -728,10 +728,10 @@
         guid = #{record.guid,jdbcType=VARCHAR},
       </if>
       <if test="record.description != null">
-        Description = #{record.description,jdbcType=LONGNVARCHAR},
+        Description = #{record.description,jdbcType=LONGVARCHAR},
       </if>
       <if test="record.mobbiledescription != null">
-        MobbileDescription = #{record.mobbiledescription,jdbcType=LONGNVARCHAR},
+        MobbileDescription = #{record.mobbiledescription,jdbcType=LONGVARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -743,13 +743,13 @@
     set ProductId = #{record.productid,jdbcType=INTEGER},
       CategoryId = #{record.categoryid,jdbcType=INTEGER},
       TypeId = #{record.typeid,jdbcType=INTEGER},
-      ProductName = #{record.productname,jdbcType=NVARCHAR},
-      ProductCode = #{record.productcode,jdbcType=NVARCHAR},
-      ShortDescription = #{record.shortdescription,jdbcType=NVARCHAR},
-      Unit = #{record.unit,jdbcType=NVARCHAR},
-      Title = #{record.title,jdbcType=NVARCHAR},
-      Meta_Description = #{record.metaDescription,jdbcType=NVARCHAR},
-      Meta_Keywords = #{record.metaKeywords,jdbcType=NVARCHAR},
+      ProductName = #{record.productname,jdbcType=VARCHAR},
+      ProductCode = #{record.productcode,jdbcType=VARCHAR},
+      ShortDescription = #{record.shortdescription,jdbcType=VARCHAR},
+      Unit = #{record.unit,jdbcType=VARCHAR},
+      Title = #{record.title,jdbcType=VARCHAR},
+      Meta_Description = #{record.metaDescription,jdbcType=VARCHAR},
+      Meta_Keywords = #{record.metaKeywords,jdbcType=VARCHAR},
       SaleStatus = #{record.salestatus,jdbcType=INTEGER},
       AddedDate = #{record.addeddate,jdbcType=TIMESTAMP},
       UpdateDate = #{record.updatedate,jdbcType=TIMESTAMP},
@@ -757,27 +757,27 @@
       SaleCounts = #{record.salecounts,jdbcType=INTEGER},
       ShowSaleCounts = #{record.showsalecounts,jdbcType=INTEGER},
       DisplaySequence = #{record.displaysequence,jdbcType=INTEGER},
-      ImageUrl1 = #{record.imageurl1,jdbcType=NVARCHAR},
-      ImageUrl2 = #{record.imageurl2,jdbcType=NVARCHAR},
-      ImageUrl3 = #{record.imageurl3,jdbcType=NVARCHAR},
-      ImageUrl4 = #{record.imageurl4,jdbcType=NVARCHAR},
-      ImageUrl5 = #{record.imageurl5,jdbcType=NVARCHAR},
-      ThumbnailUrl40 = #{record.thumbnailurl40,jdbcType=NVARCHAR},
-      ThumbnailUrl60 = #{record.thumbnailurl60,jdbcType=NVARCHAR},
-      ThumbnailUrl100 = #{record.thumbnailurl100,jdbcType=NVARCHAR},
-      ThumbnailUrl160 = #{record.thumbnailurl160,jdbcType=NVARCHAR},
-      ThumbnailUrl180 = #{record.thumbnailurl180,jdbcType=NVARCHAR},
-      ThumbnailUrl220 = #{record.thumbnailurl220,jdbcType=NVARCHAR},
-      ThumbnailUrl310 = #{record.thumbnailurl310,jdbcType=NVARCHAR},
-      ThumbnailUrl410 = #{record.thumbnailurl410,jdbcType=NVARCHAR},
+      ImageUrl1 = #{record.imageurl1,jdbcType=VARCHAR},
+      ImageUrl2 = #{record.imageurl2,jdbcType=VARCHAR},
+      ImageUrl3 = #{record.imageurl3,jdbcType=VARCHAR},
+      ImageUrl4 = #{record.imageurl4,jdbcType=VARCHAR},
+      ImageUrl5 = #{record.imageurl5,jdbcType=VARCHAR},
+      ThumbnailUrl40 = #{record.thumbnailurl40,jdbcType=VARCHAR},
+      ThumbnailUrl60 = #{record.thumbnailurl60,jdbcType=VARCHAR},
+      ThumbnailUrl100 = #{record.thumbnailurl100,jdbcType=VARCHAR},
+      ThumbnailUrl160 = #{record.thumbnailurl160,jdbcType=VARCHAR},
+      ThumbnailUrl180 = #{record.thumbnailurl180,jdbcType=VARCHAR},
+      ThumbnailUrl220 = #{record.thumbnailurl220,jdbcType=VARCHAR},
+      ThumbnailUrl310 = #{record.thumbnailurl310,jdbcType=VARCHAR},
+      ThumbnailUrl410 = #{record.thumbnailurl410,jdbcType=VARCHAR},
       MarketPrice = #{record.marketprice,jdbcType=DECIMAL},
       BrandId = #{record.brandid,jdbcType=INTEGER},
-      MainCategoryPath = #{record.maincategorypath,jdbcType=NVARCHAR},
-      ExtendCategoryPath = #{record.extendcategorypath,jdbcType=NVARCHAR},
-      ExtendCategoryPath1 = #{record.extendcategorypath1,jdbcType=NVARCHAR},
-      ExtendCategoryPath2 = #{record.extendcategorypath2,jdbcType=NVARCHAR},
-      ExtendCategoryPath3 = #{record.extendcategorypath3,jdbcType=NVARCHAR},
-      ExtendCategoryPath4 = #{record.extendcategorypath4,jdbcType=NVARCHAR},
+      MainCategoryPath = #{record.maincategorypath,jdbcType=VARCHAR},
+      ExtendCategoryPath = #{record.extendcategorypath,jdbcType=VARCHAR},
+      ExtendCategoryPath1 = #{record.extendcategorypath1,jdbcType=VARCHAR},
+      ExtendCategoryPath2 = #{record.extendcategorypath2,jdbcType=VARCHAR},
+      ExtendCategoryPath3 = #{record.extendcategorypath3,jdbcType=VARCHAR},
+      ExtendCategoryPath4 = #{record.extendcategorypath4,jdbcType=VARCHAR},
       HasSKU = #{record.hassku,jdbcType=BIT},
       IsfreeShipping = #{record.isfreeshipping,jdbcType=BIT},
       TaobaoProductId = #{record.taobaoproductid,jdbcType=BIGINT},
@@ -789,12 +789,12 @@
       ThreeLevelDeduct = #{record.threeleveldeduct,jdbcType=DECIMAL},
       SupplierId = #{record.supplierid,jdbcType=INTEGER},
       AuditStatus = #{record.auditstatus,jdbcType=TINYINT},
-      AuditReson = #{record.auditreson,jdbcType=NVARCHAR},
+      AuditReson = #{record.auditreson,jdbcType=VARCHAR},
       Volume = #{record.volume,jdbcType=DECIMAL},
       TenantID = #{record.tenantid,jdbcType=INTEGER},
       guid = #{record.guid,jdbcType=VARCHAR},
-      Description = #{record.description,jdbcType=LONGNVARCHAR},
-      MobbileDescription = #{record.mobbiledescription,jdbcType=LONGNVARCHAR}
+      Description = #{record.description,jdbcType=LONGVARCHAR},
+      MobbileDescription = #{record.mobbiledescription,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -804,13 +804,13 @@
     set ProductId = #{record.productid,jdbcType=INTEGER},
       CategoryId = #{record.categoryid,jdbcType=INTEGER},
       TypeId = #{record.typeid,jdbcType=INTEGER},
-      ProductName = #{record.productname,jdbcType=NVARCHAR},
-      ProductCode = #{record.productcode,jdbcType=NVARCHAR},
-      ShortDescription = #{record.shortdescription,jdbcType=NVARCHAR},
-      Unit = #{record.unit,jdbcType=NVARCHAR},
-      Title = #{record.title,jdbcType=NVARCHAR},
-      Meta_Description = #{record.metaDescription,jdbcType=NVARCHAR},
-      Meta_Keywords = #{record.metaKeywords,jdbcType=NVARCHAR},
+      ProductName = #{record.productname,jdbcType=VARCHAR},
+      ProductCode = #{record.productcode,jdbcType=VARCHAR},
+      ShortDescription = #{record.shortdescription,jdbcType=VARCHAR},
+      Unit = #{record.unit,jdbcType=VARCHAR},
+      Title = #{record.title,jdbcType=VARCHAR},
+      Meta_Description = #{record.metaDescription,jdbcType=VARCHAR},
+      Meta_Keywords = #{record.metaKeywords,jdbcType=VARCHAR},
       SaleStatus = #{record.salestatus,jdbcType=INTEGER},
       AddedDate = #{record.addeddate,jdbcType=TIMESTAMP},
       UpdateDate = #{record.updatedate,jdbcType=TIMESTAMP},
@@ -818,27 +818,27 @@
       SaleCounts = #{record.salecounts,jdbcType=INTEGER},
       ShowSaleCounts = #{record.showsalecounts,jdbcType=INTEGER},
       DisplaySequence = #{record.displaysequence,jdbcType=INTEGER},
-      ImageUrl1 = #{record.imageurl1,jdbcType=NVARCHAR},
-      ImageUrl2 = #{record.imageurl2,jdbcType=NVARCHAR},
-      ImageUrl3 = #{record.imageurl3,jdbcType=NVARCHAR},
-      ImageUrl4 = #{record.imageurl4,jdbcType=NVARCHAR},
-      ImageUrl5 = #{record.imageurl5,jdbcType=NVARCHAR},
-      ThumbnailUrl40 = #{record.thumbnailurl40,jdbcType=NVARCHAR},
-      ThumbnailUrl60 = #{record.thumbnailurl60,jdbcType=NVARCHAR},
-      ThumbnailUrl100 = #{record.thumbnailurl100,jdbcType=NVARCHAR},
-      ThumbnailUrl160 = #{record.thumbnailurl160,jdbcType=NVARCHAR},
-      ThumbnailUrl180 = #{record.thumbnailurl180,jdbcType=NVARCHAR},
-      ThumbnailUrl220 = #{record.thumbnailurl220,jdbcType=NVARCHAR},
-      ThumbnailUrl310 = #{record.thumbnailurl310,jdbcType=NVARCHAR},
-      ThumbnailUrl410 = #{record.thumbnailurl410,jdbcType=NVARCHAR},
+      ImageUrl1 = #{record.imageurl1,jdbcType=VARCHAR},
+      ImageUrl2 = #{record.imageurl2,jdbcType=VARCHAR},
+      ImageUrl3 = #{record.imageurl3,jdbcType=VARCHAR},
+      ImageUrl4 = #{record.imageurl4,jdbcType=VARCHAR},
+      ImageUrl5 = #{record.imageurl5,jdbcType=VARCHAR},
+      ThumbnailUrl40 = #{record.thumbnailurl40,jdbcType=VARCHAR},
+      ThumbnailUrl60 = #{record.thumbnailurl60,jdbcType=VARCHAR},
+      ThumbnailUrl100 = #{record.thumbnailurl100,jdbcType=VARCHAR},
+      ThumbnailUrl160 = #{record.thumbnailurl160,jdbcType=VARCHAR},
+      ThumbnailUrl180 = #{record.thumbnailurl180,jdbcType=VARCHAR},
+      ThumbnailUrl220 = #{record.thumbnailurl220,jdbcType=VARCHAR},
+      ThumbnailUrl310 = #{record.thumbnailurl310,jdbcType=VARCHAR},
+      ThumbnailUrl410 = #{record.thumbnailurl410,jdbcType=VARCHAR},
       MarketPrice = #{record.marketprice,jdbcType=DECIMAL},
       BrandId = #{record.brandid,jdbcType=INTEGER},
-      MainCategoryPath = #{record.maincategorypath,jdbcType=NVARCHAR},
-      ExtendCategoryPath = #{record.extendcategorypath,jdbcType=NVARCHAR},
-      ExtendCategoryPath1 = #{record.extendcategorypath1,jdbcType=NVARCHAR},
-      ExtendCategoryPath2 = #{record.extendcategorypath2,jdbcType=NVARCHAR},
-      ExtendCategoryPath3 = #{record.extendcategorypath3,jdbcType=NVARCHAR},
-      ExtendCategoryPath4 = #{record.extendcategorypath4,jdbcType=NVARCHAR},
+      MainCategoryPath = #{record.maincategorypath,jdbcType=VARCHAR},
+      ExtendCategoryPath = #{record.extendcategorypath,jdbcType=VARCHAR},
+      ExtendCategoryPath1 = #{record.extendcategorypath1,jdbcType=VARCHAR},
+      ExtendCategoryPath2 = #{record.extendcategorypath2,jdbcType=VARCHAR},
+      ExtendCategoryPath3 = #{record.extendcategorypath3,jdbcType=VARCHAR},
+      ExtendCategoryPath4 = #{record.extendcategorypath4,jdbcType=VARCHAR},
       HasSKU = #{record.hassku,jdbcType=BIT},
       IsfreeShipping = #{record.isfreeshipping,jdbcType=BIT},
       TaobaoProductId = #{record.taobaoproductid,jdbcType=BIGINT},
@@ -850,7 +850,7 @@
       ThreeLevelDeduct = #{record.threeleveldeduct,jdbcType=DECIMAL},
       SupplierId = #{record.supplierid,jdbcType=INTEGER},
       AuditStatus = #{record.auditstatus,jdbcType=TINYINT},
-      AuditReson = #{record.auditreson,jdbcType=NVARCHAR},
+      AuditReson = #{record.auditreson,jdbcType=VARCHAR},
       Volume = #{record.volume,jdbcType=DECIMAL},
       TenantID = #{record.tenantid,jdbcType=INTEGER},
       guid = #{record.guid,jdbcType=VARCHAR}
@@ -868,25 +868,25 @@
         TypeId = #{typeid,jdbcType=INTEGER},
       </if>
       <if test="productname != null">
-        ProductName = #{productname,jdbcType=NVARCHAR},
+        ProductName = #{productname,jdbcType=VARCHAR},
       </if>
       <if test="productcode != null">
-        ProductCode = #{productcode,jdbcType=NVARCHAR},
+        ProductCode = #{productcode,jdbcType=VARCHAR},
       </if>
       <if test="shortdescription != null">
-        ShortDescription = #{shortdescription,jdbcType=NVARCHAR},
+        ShortDescription = #{shortdescription,jdbcType=VARCHAR},
       </if>
       <if test="unit != null">
-        Unit = #{unit,jdbcType=NVARCHAR},
+        Unit = #{unit,jdbcType=VARCHAR},
       </if>
       <if test="title != null">
-        Title = #{title,jdbcType=NVARCHAR},
+        Title = #{title,jdbcType=VARCHAR},
       </if>
       <if test="metaDescription != null">
-        Meta_Description = #{metaDescription,jdbcType=NVARCHAR},
+        Meta_Description = #{metaDescription,jdbcType=VARCHAR},
       </if>
       <if test="metaKeywords != null">
-        Meta_Keywords = #{metaKeywords,jdbcType=NVARCHAR},
+        Meta_Keywords = #{metaKeywords,jdbcType=VARCHAR},
       </if>
       <if test="salestatus != null">
         SaleStatus = #{salestatus,jdbcType=INTEGER},
@@ -910,43 +910,43 @@
         DisplaySequence = #{displaysequence,jdbcType=INTEGER},
       </if>
       <if test="imageurl1 != null">
-        ImageUrl1 = #{imageurl1,jdbcType=NVARCHAR},
+        ImageUrl1 = #{imageurl1,jdbcType=VARCHAR},
       </if>
       <if test="imageurl2 != null">
-        ImageUrl2 = #{imageurl2,jdbcType=NVARCHAR},
+        ImageUrl2 = #{imageurl2,jdbcType=VARCHAR},
       </if>
       <if test="imageurl3 != null">
-        ImageUrl3 = #{imageurl3,jdbcType=NVARCHAR},
+        ImageUrl3 = #{imageurl3,jdbcType=VARCHAR},
       </if>
       <if test="imageurl4 != null">
-        ImageUrl4 = #{imageurl4,jdbcType=NVARCHAR},
+        ImageUrl4 = #{imageurl4,jdbcType=VARCHAR},
       </if>
       <if test="imageurl5 != null">
-        ImageUrl5 = #{imageurl5,jdbcType=NVARCHAR},
+        ImageUrl5 = #{imageurl5,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl40 != null">
-        ThumbnailUrl40 = #{thumbnailurl40,jdbcType=NVARCHAR},
+        ThumbnailUrl40 = #{thumbnailurl40,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl60 != null">
-        ThumbnailUrl60 = #{thumbnailurl60,jdbcType=NVARCHAR},
+        ThumbnailUrl60 = #{thumbnailurl60,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl100 != null">
-        ThumbnailUrl100 = #{thumbnailurl100,jdbcType=NVARCHAR},
+        ThumbnailUrl100 = #{thumbnailurl100,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl160 != null">
-        ThumbnailUrl160 = #{thumbnailurl160,jdbcType=NVARCHAR},
+        ThumbnailUrl160 = #{thumbnailurl160,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl180 != null">
-        ThumbnailUrl180 = #{thumbnailurl180,jdbcType=NVARCHAR},
+        ThumbnailUrl180 = #{thumbnailurl180,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl220 != null">
-        ThumbnailUrl220 = #{thumbnailurl220,jdbcType=NVARCHAR},
+        ThumbnailUrl220 = #{thumbnailurl220,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl310 != null">
-        ThumbnailUrl310 = #{thumbnailurl310,jdbcType=NVARCHAR},
+        ThumbnailUrl310 = #{thumbnailurl310,jdbcType=VARCHAR},
       </if>
       <if test="thumbnailurl410 != null">
-        ThumbnailUrl410 = #{thumbnailurl410,jdbcType=NVARCHAR},
+        ThumbnailUrl410 = #{thumbnailurl410,jdbcType=VARCHAR},
       </if>
       <if test="marketprice != null">
         MarketPrice = #{marketprice,jdbcType=DECIMAL},
@@ -955,22 +955,22 @@
         BrandId = #{brandid,jdbcType=INTEGER},
       </if>
       <if test="maincategorypath != null">
-        MainCategoryPath = #{maincategorypath,jdbcType=NVARCHAR},
+        MainCategoryPath = #{maincategorypath,jdbcType=VARCHAR},
       </if>
       <if test="extendcategorypath != null">
-        ExtendCategoryPath = #{extendcategorypath,jdbcType=NVARCHAR},
+        ExtendCategoryPath = #{extendcategorypath,jdbcType=VARCHAR},
       </if>
       <if test="extendcategorypath1 != null">
-        ExtendCategoryPath1 = #{extendcategorypath1,jdbcType=NVARCHAR},
+        ExtendCategoryPath1 = #{extendcategorypath1,jdbcType=VARCHAR},
       </if>
       <if test="extendcategorypath2 != null">
-        ExtendCategoryPath2 = #{extendcategorypath2,jdbcType=NVARCHAR},
+        ExtendCategoryPath2 = #{extendcategorypath2,jdbcType=VARCHAR},
       </if>
       <if test="extendcategorypath3 != null">
-        ExtendCategoryPath3 = #{extendcategorypath3,jdbcType=NVARCHAR},
+        ExtendCategoryPath3 = #{extendcategorypath3,jdbcType=VARCHAR},
       </if>
       <if test="extendcategorypath4 != null">
-        ExtendCategoryPath4 = #{extendcategorypath4,jdbcType=NVARCHAR},
+        ExtendCategoryPath4 = #{extendcategorypath4,jdbcType=VARCHAR},
       </if>
       <if test="hassku != null">
         HasSKU = #{hassku,jdbcType=BIT},
@@ -1006,7 +1006,7 @@
         AuditStatus = #{auditstatus,jdbcType=TINYINT},
       </if>
       <if test="auditreson != null">
-        AuditReson = #{auditreson,jdbcType=NVARCHAR},
+        AuditReson = #{auditreson,jdbcType=VARCHAR},
       </if>
       <if test="volume != null">
         Volume = #{volume,jdbcType=DECIMAL},
@@ -1018,10 +1018,10 @@
         guid = #{guid,jdbcType=VARCHAR},
       </if>
       <if test="description != null">
-        Description = #{description,jdbcType=LONGNVARCHAR},
+        Description = #{description,jdbcType=LONGVARCHAR},
       </if>
       <if test="mobbiledescription != null">
-        MobbileDescription = #{mobbiledescription,jdbcType=LONGNVARCHAR},
+        MobbileDescription = #{mobbiledescription,jdbcType=LONGVARCHAR},
       </if>
     </set>
     where ProductId = #{productid,jdbcType=INTEGER}
@@ -1030,13 +1030,13 @@
     update Hishop_Products
     set CategoryId = #{categoryid,jdbcType=INTEGER},
       TypeId = #{typeid,jdbcType=INTEGER},
-      ProductName = #{productname,jdbcType=NVARCHAR},
-      ProductCode = #{productcode,jdbcType=NVARCHAR},
-      ShortDescription = #{shortdescription,jdbcType=NVARCHAR},
-      Unit = #{unit,jdbcType=NVARCHAR},
-      Title = #{title,jdbcType=NVARCHAR},
-      Meta_Description = #{metaDescription,jdbcType=NVARCHAR},
-      Meta_Keywords = #{metaKeywords,jdbcType=NVARCHAR},
+      ProductName = #{productname,jdbcType=VARCHAR},
+      ProductCode = #{productcode,jdbcType=VARCHAR},
+      ShortDescription = #{shortdescription,jdbcType=VARCHAR},
+      Unit = #{unit,jdbcType=VARCHAR},
+      Title = #{title,jdbcType=VARCHAR},
+      Meta_Description = #{metaDescription,jdbcType=VARCHAR},
+      Meta_Keywords = #{metaKeywords,jdbcType=VARCHAR},
       SaleStatus = #{salestatus,jdbcType=INTEGER},
       AddedDate = #{addeddate,jdbcType=TIMESTAMP},
       UpdateDate = #{updatedate,jdbcType=TIMESTAMP},
@@ -1044,27 +1044,27 @@
       SaleCounts = #{salecounts,jdbcType=INTEGER},
       ShowSaleCounts = #{showsalecounts,jdbcType=INTEGER},
       DisplaySequence = #{displaysequence,jdbcType=INTEGER},
-      ImageUrl1 = #{imageurl1,jdbcType=NVARCHAR},
-      ImageUrl2 = #{imageurl2,jdbcType=NVARCHAR},
-      ImageUrl3 = #{imageurl3,jdbcType=NVARCHAR},
-      ImageUrl4 = #{imageurl4,jdbcType=NVARCHAR},
-      ImageUrl5 = #{imageurl5,jdbcType=NVARCHAR},
-      ThumbnailUrl40 = #{thumbnailurl40,jdbcType=NVARCHAR},
-      ThumbnailUrl60 = #{thumbnailurl60,jdbcType=NVARCHAR},
-      ThumbnailUrl100 = #{thumbnailurl100,jdbcType=NVARCHAR},
-      ThumbnailUrl160 = #{thumbnailurl160,jdbcType=NVARCHAR},
-      ThumbnailUrl180 = #{thumbnailurl180,jdbcType=NVARCHAR},
-      ThumbnailUrl220 = #{thumbnailurl220,jdbcType=NVARCHAR},
-      ThumbnailUrl310 = #{thumbnailurl310,jdbcType=NVARCHAR},
-      ThumbnailUrl410 = #{thumbnailurl410,jdbcType=NVARCHAR},
+      ImageUrl1 = #{imageurl1,jdbcType=VARCHAR},
+      ImageUrl2 = #{imageurl2,jdbcType=VARCHAR},
+      ImageUrl3 = #{imageurl3,jdbcType=VARCHAR},
+      ImageUrl4 = #{imageurl4,jdbcType=VARCHAR},
+      ImageUrl5 = #{imageurl5,jdbcType=VARCHAR},
+      ThumbnailUrl40 = #{thumbnailurl40,jdbcType=VARCHAR},
+      ThumbnailUrl60 = #{thumbnailurl60,jdbcType=VARCHAR},
+      ThumbnailUrl100 = #{thumbnailurl100,jdbcType=VARCHAR},
+      ThumbnailUrl160 = #{thumbnailurl160,jdbcType=VARCHAR},
+      ThumbnailUrl180 = #{thumbnailurl180,jdbcType=VARCHAR},
+      ThumbnailUrl220 = #{thumbnailurl220,jdbcType=VARCHAR},
+      ThumbnailUrl310 = #{thumbnailurl310,jdbcType=VARCHAR},
+      ThumbnailUrl410 = #{thumbnailurl410,jdbcType=VARCHAR},
       MarketPrice = #{marketprice,jdbcType=DECIMAL},
       BrandId = #{brandid,jdbcType=INTEGER},
-      MainCategoryPath = #{maincategorypath,jdbcType=NVARCHAR},
-      ExtendCategoryPath = #{extendcategorypath,jdbcType=NVARCHAR},
-      ExtendCategoryPath1 = #{extendcategorypath1,jdbcType=NVARCHAR},
-      ExtendCategoryPath2 = #{extendcategorypath2,jdbcType=NVARCHAR},
-      ExtendCategoryPath3 = #{extendcategorypath3,jdbcType=NVARCHAR},
-      ExtendCategoryPath4 = #{extendcategorypath4,jdbcType=NVARCHAR},
+      MainCategoryPath = #{maincategorypath,jdbcType=VARCHAR},
+      ExtendCategoryPath = #{extendcategorypath,jdbcType=VARCHAR},
+      ExtendCategoryPath1 = #{extendcategorypath1,jdbcType=VARCHAR},
+      ExtendCategoryPath2 = #{extendcategorypath2,jdbcType=VARCHAR},
+      ExtendCategoryPath3 = #{extendcategorypath3,jdbcType=VARCHAR},
+      ExtendCategoryPath4 = #{extendcategorypath4,jdbcType=VARCHAR},
       HasSKU = #{hassku,jdbcType=BIT},
       IsfreeShipping = #{isfreeshipping,jdbcType=BIT},
       TaobaoProductId = #{taobaoproductid,jdbcType=BIGINT},
@@ -1076,25 +1076,25 @@
       ThreeLevelDeduct = #{threeleveldeduct,jdbcType=DECIMAL},
       SupplierId = #{supplierid,jdbcType=INTEGER},
       AuditStatus = #{auditstatus,jdbcType=TINYINT},
-      AuditReson = #{auditreson,jdbcType=NVARCHAR},
+      AuditReson = #{auditreson,jdbcType=VARCHAR},
       Volume = #{volume,jdbcType=DECIMAL},
       TenantID = #{tenantid,jdbcType=INTEGER},
       guid = #{guid,jdbcType=VARCHAR},
-      Description = #{description,jdbcType=LONGNVARCHAR},
-      MobbileDescription = #{mobbiledescription,jdbcType=LONGNVARCHAR}
+      Description = #{description,jdbcType=LONGVARCHAR},
+      MobbileDescription = #{mobbiledescription,jdbcType=LONGVARCHAR}
     where ProductId = #{productid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.ManJiaSonPort.sync.dto.HishopProducts">
     update Hishop_Products
     set CategoryId = #{categoryid,jdbcType=INTEGER},
       TypeId = #{typeid,jdbcType=INTEGER},
-      ProductName = #{productname,jdbcType=NVARCHAR},
-      ProductCode = #{productcode,jdbcType=NVARCHAR},
-      ShortDescription = #{shortdescription,jdbcType=NVARCHAR},
-      Unit = #{unit,jdbcType=NVARCHAR},
-      Title = #{title,jdbcType=NVARCHAR},
-      Meta_Description = #{metaDescription,jdbcType=NVARCHAR},
-      Meta_Keywords = #{metaKeywords,jdbcType=NVARCHAR},
+      ProductName = #{productname,jdbcType=VARCHAR},
+      ProductCode = #{productcode,jdbcType=VARCHAR},
+      ShortDescription = #{shortdescription,jdbcType=VARCHAR},
+      Unit = #{unit,jdbcType=VARCHAR},
+      Title = #{title,jdbcType=VARCHAR},
+      Meta_Description = #{metaDescription,jdbcType=VARCHAR},
+      Meta_Keywords = #{metaKeywords,jdbcType=VARCHAR},
       SaleStatus = #{salestatus,jdbcType=INTEGER},
       AddedDate = #{addeddate,jdbcType=TIMESTAMP},
       UpdateDate = #{updatedate,jdbcType=TIMESTAMP},
@@ -1102,27 +1102,27 @@
       SaleCounts = #{salecounts,jdbcType=INTEGER},
       ShowSaleCounts = #{showsalecounts,jdbcType=INTEGER},
       DisplaySequence = #{displaysequence,jdbcType=INTEGER},
-      ImageUrl1 = #{imageurl1,jdbcType=NVARCHAR},
-      ImageUrl2 = #{imageurl2,jdbcType=NVARCHAR},
-      ImageUrl3 = #{imageurl3,jdbcType=NVARCHAR},
-      ImageUrl4 = #{imageurl4,jdbcType=NVARCHAR},
-      ImageUrl5 = #{imageurl5,jdbcType=NVARCHAR},
-      ThumbnailUrl40 = #{thumbnailurl40,jdbcType=NVARCHAR},
-      ThumbnailUrl60 = #{thumbnailurl60,jdbcType=NVARCHAR},
-      ThumbnailUrl100 = #{thumbnailurl100,jdbcType=NVARCHAR},
-      ThumbnailUrl160 = #{thumbnailurl160,jdbcType=NVARCHAR},
-      ThumbnailUrl180 = #{thumbnailurl180,jdbcType=NVARCHAR},
-      ThumbnailUrl220 = #{thumbnailurl220,jdbcType=NVARCHAR},
-      ThumbnailUrl310 = #{thumbnailurl310,jdbcType=NVARCHAR},
-      ThumbnailUrl410 = #{thumbnailurl410,jdbcType=NVARCHAR},
+      ImageUrl1 = #{imageurl1,jdbcType=VARCHAR},
+      ImageUrl2 = #{imageurl2,jdbcType=VARCHAR},
+      ImageUrl3 = #{imageurl3,jdbcType=VARCHAR},
+      ImageUrl4 = #{imageurl4,jdbcType=VARCHAR},
+      ImageUrl5 = #{imageurl5,jdbcType=VARCHAR},
+      ThumbnailUrl40 = #{thumbnailurl40,jdbcType=VARCHAR},
+      ThumbnailUrl60 = #{thumbnailurl60,jdbcType=VARCHAR},
+      ThumbnailUrl100 = #{thumbnailurl100,jdbcType=VARCHAR},
+      ThumbnailUrl160 = #{thumbnailurl160,jdbcType=VARCHAR},
+      ThumbnailUrl180 = #{thumbnailurl180,jdbcType=VARCHAR},
+      ThumbnailUrl220 = #{thumbnailurl220,jdbcType=VARCHAR},
+      ThumbnailUrl310 = #{thumbnailurl310,jdbcType=VARCHAR},
+      ThumbnailUrl410 = #{thumbnailurl410,jdbcType=VARCHAR},
       MarketPrice = #{marketprice,jdbcType=DECIMAL},
       BrandId = #{brandid,jdbcType=INTEGER},
-      MainCategoryPath = #{maincategorypath,jdbcType=NVARCHAR},
-      ExtendCategoryPath = #{extendcategorypath,jdbcType=NVARCHAR},
-      ExtendCategoryPath1 = #{extendcategorypath1,jdbcType=NVARCHAR},
-      ExtendCategoryPath2 = #{extendcategorypath2,jdbcType=NVARCHAR},
-      ExtendCategoryPath3 = #{extendcategorypath3,jdbcType=NVARCHAR},
-      ExtendCategoryPath4 = #{extendcategorypath4,jdbcType=NVARCHAR},
+      MainCategoryPath = #{maincategorypath,jdbcType=VARCHAR},
+      ExtendCategoryPath = #{extendcategorypath,jdbcType=VARCHAR},
+      ExtendCategoryPath1 = #{extendcategorypath1,jdbcType=VARCHAR},
+      ExtendCategoryPath2 = #{extendcategorypath2,jdbcType=VARCHAR},
+      ExtendCategoryPath3 = #{extendcategorypath3,jdbcType=VARCHAR},
+      ExtendCategoryPath4 = #{extendcategorypath4,jdbcType=VARCHAR},
       HasSKU = #{hassku,jdbcType=BIT},
       IsfreeShipping = #{isfreeshipping,jdbcType=BIT},
       TaobaoProductId = #{taobaoproductid,jdbcType=BIGINT},
@@ -1134,7 +1134,7 @@
       ThreeLevelDeduct = #{threeleveldeduct,jdbcType=DECIMAL},
       SupplierId = #{supplierid,jdbcType=INTEGER},
       AuditStatus = #{auditstatus,jdbcType=TINYINT},
-      AuditReson = #{auditreson,jdbcType=NVARCHAR},
+      AuditReson = #{auditreson,jdbcType=VARCHAR},
       Volume = #{volume,jdbcType=DECIMAL},
       TenantID = #{tenantid,jdbcType=INTEGER},
       guid = #{guid,jdbcType=VARCHAR}

@@ -3,30 +3,30 @@
 <mapper namespace="com.ManJiaSonPort.sync.dao.mapperJava.HishopCategoriesMapper">
   <resultMap id="BaseResultMap" type="com.ManJiaSonPort.sync.dto.HishopCategories">
     <id column="CategoryId" jdbcType="INTEGER" property="categoryid" />
-    <result column="Name" jdbcType="NVARCHAR" property="name" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
     <result column="DisplaySequence" jdbcType="INTEGER" property="displaysequence" />
-    <result column="Meta_Title" jdbcType="NVARCHAR" property="metaTitle" />
-    <result column="Meta_Description" jdbcType="NVARCHAR" property="metaDescription" />
-    <result column="Meta_Keywords" jdbcType="NVARCHAR" property="metaKeywords" />
+    <result column="Meta_Title" jdbcType="VARCHAR" property="metaTitle" />
+    <result column="Meta_Description" jdbcType="VARCHAR" property="metaDescription" />
+    <result column="Meta_Keywords" jdbcType="VARCHAR" property="metaKeywords" />
     <result column="ParentCategoryId" jdbcType="INTEGER" property="parentcategoryid" />
     <result column="Depth" jdbcType="INTEGER" property="depth" />
     <result column="Path" jdbcType="VARCHAR" property="path" />
-    <result column="RewriteName" jdbcType="NVARCHAR" property="rewritename" />
-    <result column="SKUPrefix" jdbcType="NVARCHAR" property="skuprefix" />
+    <result column="RewriteName" jdbcType="VARCHAR" property="rewritename" />
+    <result column="SKUPrefix" jdbcType="VARCHAR" property="skuprefix" />
     <result column="AssociatedProductType" jdbcType="INTEGER" property="associatedproducttype" />
     <result column="Theme" jdbcType="VARCHAR" property="theme" />
     <result column="HasChildren" jdbcType="BIT" property="haschildren" />
-    <result column="Icon" jdbcType="NVARCHAR" property="icon" />
-    <result column="BigImageUrl" jdbcType="NVARCHAR" property="bigimageurl" />
+    <result column="Icon" jdbcType="VARCHAR" property="icon" />
+    <result column="BigImageUrl" jdbcType="VARCHAR" property="bigimageurl" />
     <result column="TenantID" jdbcType="INTEGER" property="tenantid" />
     <result column="guid" jdbcType="VARCHAR" property="guid" />
   </resultMap>
   <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.ManJiaSonPort.sync.dto.HishopCategoriesWithBLOBs">
-    <result column="Notes1" jdbcType="LONGNVARCHAR" property="notes1" />
-    <result column="Notes2" jdbcType="LONGNVARCHAR" property="notes2" />
-    <result column="Notes3" jdbcType="LONGNVARCHAR" property="notes3" />
-    <result column="Notes4" jdbcType="LONGNVARCHAR" property="notes4" />
-    <result column="Notes5" jdbcType="LONGNVARCHAR" property="notes5" />
+    <result column="Notes1" jdbcType="LONGVARCHAR" property="notes1" />
+    <result column="Notes2" jdbcType="LONGVARCHAR" property="notes2" />
+    <result column="Notes3" jdbcType="LONGVARCHAR" property="notes3" />
+    <result column="Notes4" jdbcType="LONGVARCHAR" property="notes4" />
+    <result column="Notes5" jdbcType="LONGVARCHAR" property="notes5" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -151,14 +151,14 @@
       BigImageUrl, TenantID, guid, 
       Notes1, Notes2, Notes3, 
       Notes4, Notes5)
-    values (#{categoryid,jdbcType=INTEGER}, #{name,jdbcType=NVARCHAR}, #{displaysequence,jdbcType=INTEGER}, 
-      #{metaTitle,jdbcType=NVARCHAR}, #{metaDescription,jdbcType=NVARCHAR}, #{metaKeywords,jdbcType=NVARCHAR}, 
+    values (#{categoryid,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{displaysequence,jdbcType=INTEGER}, 
+      #{metaTitle,jdbcType=VARCHAR}, #{metaDescription,jdbcType=VARCHAR}, #{metaKeywords,jdbcType=VARCHAR}, 
       #{parentcategoryid,jdbcType=INTEGER}, #{depth,jdbcType=INTEGER}, #{path,jdbcType=VARCHAR}, 
-      #{rewritename,jdbcType=NVARCHAR}, #{skuprefix,jdbcType=NVARCHAR}, #{associatedproducttype,jdbcType=INTEGER}, 
-      #{theme,jdbcType=VARCHAR}, #{haschildren,jdbcType=BIT}, #{icon,jdbcType=NVARCHAR}, 
-      #{bigimageurl,jdbcType=NVARCHAR}, #{tenantid,jdbcType=INTEGER}, #{guid,jdbcType=VARCHAR}, 
-      #{notes1,jdbcType=LONGNVARCHAR}, #{notes2,jdbcType=LONGNVARCHAR}, #{notes3,jdbcType=LONGNVARCHAR}, 
-      #{notes4,jdbcType=LONGNVARCHAR}, #{notes5,jdbcType=LONGNVARCHAR})
+      #{rewritename,jdbcType=VARCHAR}, #{skuprefix,jdbcType=VARCHAR}, #{associatedproducttype,jdbcType=INTEGER}, 
+      #{theme,jdbcType=VARCHAR}, #{haschildren,jdbcType=BIT}, #{icon,jdbcType=VARCHAR}, 
+      #{bigimageurl,jdbcType=VARCHAR}, #{tenantid,jdbcType=INTEGER}, #{guid,jdbcType=VARCHAR}, 
+      #{notes1,jdbcType=LONGVARCHAR}, #{notes2,jdbcType=LONGVARCHAR}, #{notes3,jdbcType=LONGVARCHAR}, 
+      #{notes4,jdbcType=LONGVARCHAR}, #{notes5,jdbcType=LONGVARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.ManJiaSonPort.sync.dto.HishopCategoriesWithBLOBs">
     insert into Hishop_Categories
@@ -238,19 +238,19 @@
         #{categoryid,jdbcType=INTEGER},
       </if>
       <if test="name != null">
-        #{name,jdbcType=NVARCHAR},
+        #{name,jdbcType=VARCHAR},
       </if>
       <if test="displaysequence != null">
         #{displaysequence,jdbcType=INTEGER},
       </if>
       <if test="metaTitle != null">
-        #{metaTitle,jdbcType=NVARCHAR},
+        #{metaTitle,jdbcType=VARCHAR},
       </if>
       <if test="metaDescription != null">
-        #{metaDescription,jdbcType=NVARCHAR},
+        #{metaDescription,jdbcType=VARCHAR},
       </if>
       <if test="metaKeywords != null">
-        #{metaKeywords,jdbcType=NVARCHAR},
+        #{metaKeywords,jdbcType=VARCHAR},
       </if>
       <if test="parentcategoryid != null">
         #{parentcategoryid,jdbcType=INTEGER},
@@ -262,10 +262,10 @@
         #{path,jdbcType=VARCHAR},
       </if>
       <if test="rewritename != null">
-        #{rewritename,jdbcType=NVARCHAR},
+        #{rewritename,jdbcType=VARCHAR},
       </if>
       <if test="skuprefix != null">
-        #{skuprefix,jdbcType=NVARCHAR},
+        #{skuprefix,jdbcType=VARCHAR},
       </if>
       <if test="associatedproducttype != null">
         #{associatedproducttype,jdbcType=INTEGER},
@@ -277,10 +277,10 @@
         #{haschildren,jdbcType=BIT},
       </if>
       <if test="icon != null">
-        #{icon,jdbcType=NVARCHAR},
+        #{icon,jdbcType=VARCHAR},
       </if>
       <if test="bigimageurl != null">
-        #{bigimageurl,jdbcType=NVARCHAR},
+        #{bigimageurl,jdbcType=VARCHAR},
       </if>
       <if test="tenantid != null">
         #{tenantid,jdbcType=INTEGER},
@@ -289,19 +289,19 @@
         #{guid,jdbcType=VARCHAR},
       </if>
       <if test="notes1 != null">
-        #{notes1,jdbcType=LONGNVARCHAR},
+        #{notes1,jdbcType=LONGVARCHAR},
       </if>
       <if test="notes2 != null">
-        #{notes2,jdbcType=LONGNVARCHAR},
+        #{notes2,jdbcType=LONGVARCHAR},
       </if>
       <if test="notes3 != null">
-        #{notes3,jdbcType=LONGNVARCHAR},
+        #{notes3,jdbcType=LONGVARCHAR},
       </if>
       <if test="notes4 != null">
-        #{notes4,jdbcType=LONGNVARCHAR},
+        #{notes4,jdbcType=LONGVARCHAR},
       </if>
       <if test="notes5 != null">
-        #{notes5,jdbcType=LONGNVARCHAR},
+        #{notes5,jdbcType=LONGVARCHAR},
       </if>
     </trim>
   </insert>
@@ -318,19 +318,19 @@
         CategoryId = #{record.categoryid,jdbcType=INTEGER},
       </if>
       <if test="record.name != null">
-        Name = #{record.name,jdbcType=NVARCHAR},
+        Name = #{record.name,jdbcType=VARCHAR},
       </if>
       <if test="record.displaysequence != null">
         DisplaySequence = #{record.displaysequence,jdbcType=INTEGER},
       </if>
       <if test="record.metaTitle != null">
-        Meta_Title = #{record.metaTitle,jdbcType=NVARCHAR},
+        Meta_Title = #{record.metaTitle,jdbcType=VARCHAR},
       </if>
       <if test="record.metaDescription != null">
-        Meta_Description = #{record.metaDescription,jdbcType=NVARCHAR},
+        Meta_Description = #{record.metaDescription,jdbcType=VARCHAR},
       </if>
       <if test="record.metaKeywords != null">
-        Meta_Keywords = #{record.metaKeywords,jdbcType=NVARCHAR},
+        Meta_Keywords = #{record.metaKeywords,jdbcType=VARCHAR},
       </if>
       <if test="record.parentcategoryid != null">
         ParentCategoryId = #{record.parentcategoryid,jdbcType=INTEGER},
@@ -342,10 +342,10 @@
         Path = #{record.path,jdbcType=VARCHAR},
       </if>
       <if test="record.rewritename != null">
-        RewriteName = #{record.rewritename,jdbcType=NVARCHAR},
+        RewriteName = #{record.rewritename,jdbcType=VARCHAR},
       </if>
       <if test="record.skuprefix != null">
-        SKUPrefix = #{record.skuprefix,jdbcType=NVARCHAR},
+        SKUPrefix = #{record.skuprefix,jdbcType=VARCHAR},
       </if>
       <if test="record.associatedproducttype != null">
         AssociatedProductType = #{record.associatedproducttype,jdbcType=INTEGER},
@@ -357,10 +357,10 @@
         HasChildren = #{record.haschildren,jdbcType=BIT},
       </if>
       <if test="record.icon != null">
-        Icon = #{record.icon,jdbcType=NVARCHAR},
+        Icon = #{record.icon,jdbcType=VARCHAR},
       </if>
       <if test="record.bigimageurl != null">
-        BigImageUrl = #{record.bigimageurl,jdbcType=NVARCHAR},
+        BigImageUrl = #{record.bigimageurl,jdbcType=VARCHAR},
       </if>
       <if test="record.tenantid != null">
         TenantID = #{record.tenantid,jdbcType=INTEGER},
@@ -369,19 +369,19 @@
         guid = #{record.guid,jdbcType=VARCHAR},
       </if>
       <if test="record.notes1 != null">
-        Notes1 = #{record.notes1,jdbcType=LONGNVARCHAR},
+        Notes1 = #{record.notes1,jdbcType=LONGVARCHAR},
       </if>
       <if test="record.notes2 != null">
-        Notes2 = #{record.notes2,jdbcType=LONGNVARCHAR},
+        Notes2 = #{record.notes2,jdbcType=LONGVARCHAR},
       </if>
       <if test="record.notes3 != null">
-        Notes3 = #{record.notes3,jdbcType=LONGNVARCHAR},
+        Notes3 = #{record.notes3,jdbcType=LONGVARCHAR},
       </if>
       <if test="record.notes4 != null">
-        Notes4 = #{record.notes4,jdbcType=LONGNVARCHAR},
+        Notes4 = #{record.notes4,jdbcType=LONGVARCHAR},
       </if>
       <if test="record.notes5 != null">
-        Notes5 = #{record.notes5,jdbcType=LONGNVARCHAR},
+        Notes5 = #{record.notes5,jdbcType=LONGVARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -391,28 +391,28 @@
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update Hishop_Categories
     set CategoryId = #{record.categoryid,jdbcType=INTEGER},
-      Name = #{record.name,jdbcType=NVARCHAR},
+      Name = #{record.name,jdbcType=VARCHAR},
       DisplaySequence = #{record.displaysequence,jdbcType=INTEGER},
-      Meta_Title = #{record.metaTitle,jdbcType=NVARCHAR},
-      Meta_Description = #{record.metaDescription,jdbcType=NVARCHAR},
-      Meta_Keywords = #{record.metaKeywords,jdbcType=NVARCHAR},
+      Meta_Title = #{record.metaTitle,jdbcType=VARCHAR},
+      Meta_Description = #{record.metaDescription,jdbcType=VARCHAR},
+      Meta_Keywords = #{record.metaKeywords,jdbcType=VARCHAR},
       ParentCategoryId = #{record.parentcategoryid,jdbcType=INTEGER},
       Depth = #{record.depth,jdbcType=INTEGER},
       Path = #{record.path,jdbcType=VARCHAR},
-      RewriteName = #{record.rewritename,jdbcType=NVARCHAR},
-      SKUPrefix = #{record.skuprefix,jdbcType=NVARCHAR},
+      RewriteName = #{record.rewritename,jdbcType=VARCHAR},
+      SKUPrefix = #{record.skuprefix,jdbcType=VARCHAR},
       AssociatedProductType = #{record.associatedproducttype,jdbcType=INTEGER},
       Theme = #{record.theme,jdbcType=VARCHAR},
       HasChildren = #{record.haschildren,jdbcType=BIT},
-      Icon = #{record.icon,jdbcType=NVARCHAR},
-      BigImageUrl = #{record.bigimageurl,jdbcType=NVARCHAR},
+      Icon = #{record.icon,jdbcType=VARCHAR},
+      BigImageUrl = #{record.bigimageurl,jdbcType=VARCHAR},
       TenantID = #{record.tenantid,jdbcType=INTEGER},
       guid = #{record.guid,jdbcType=VARCHAR},
-      Notes1 = #{record.notes1,jdbcType=LONGNVARCHAR},
-      Notes2 = #{record.notes2,jdbcType=LONGNVARCHAR},
-      Notes3 = #{record.notes3,jdbcType=LONGNVARCHAR},
-      Notes4 = #{record.notes4,jdbcType=LONGNVARCHAR},
-      Notes5 = #{record.notes5,jdbcType=LONGNVARCHAR}
+      Notes1 = #{record.notes1,jdbcType=LONGVARCHAR},
+      Notes2 = #{record.notes2,jdbcType=LONGVARCHAR},
+      Notes3 = #{record.notes3,jdbcType=LONGVARCHAR},
+      Notes4 = #{record.notes4,jdbcType=LONGVARCHAR},
+      Notes5 = #{record.notes5,jdbcType=LONGVARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -420,21 +420,21 @@
   <update id="updateByExample" parameterType="map">
     update Hishop_Categories
     set CategoryId = #{record.categoryid,jdbcType=INTEGER},
-      Name = #{record.name,jdbcType=NVARCHAR},
+      Name = #{record.name,jdbcType=VARCHAR},
       DisplaySequence = #{record.displaysequence,jdbcType=INTEGER},
-      Meta_Title = #{record.metaTitle,jdbcType=NVARCHAR},
-      Meta_Description = #{record.metaDescription,jdbcType=NVARCHAR},
-      Meta_Keywords = #{record.metaKeywords,jdbcType=NVARCHAR},
+      Meta_Title = #{record.metaTitle,jdbcType=VARCHAR},
+      Meta_Description = #{record.metaDescription,jdbcType=VARCHAR},
+      Meta_Keywords = #{record.metaKeywords,jdbcType=VARCHAR},
       ParentCategoryId = #{record.parentcategoryid,jdbcType=INTEGER},
       Depth = #{record.depth,jdbcType=INTEGER},
       Path = #{record.path,jdbcType=VARCHAR},
-      RewriteName = #{record.rewritename,jdbcType=NVARCHAR},
-      SKUPrefix = #{record.skuprefix,jdbcType=NVARCHAR},
+      RewriteName = #{record.rewritename,jdbcType=VARCHAR},
+      SKUPrefix = #{record.skuprefix,jdbcType=VARCHAR},
       AssociatedProductType = #{record.associatedproducttype,jdbcType=INTEGER},
       Theme = #{record.theme,jdbcType=VARCHAR},
       HasChildren = #{record.haschildren,jdbcType=BIT},
-      Icon = #{record.icon,jdbcType=NVARCHAR},
-      BigImageUrl = #{record.bigimageurl,jdbcType=NVARCHAR},
+      Icon = #{record.icon,jdbcType=VARCHAR},
+      BigImageUrl = #{record.bigimageurl,jdbcType=VARCHAR},
       TenantID = #{record.tenantid,jdbcType=INTEGER},
       guid = #{record.guid,jdbcType=VARCHAR}
     <if test="_parameter != null">
@@ -445,19 +445,19 @@
     update Hishop_Categories
     <set>
       <if test="name != null">
-        Name = #{name,jdbcType=NVARCHAR},
+        Name = #{name,jdbcType=VARCHAR},
       </if>
       <if test="displaysequence != null">
         DisplaySequence = #{displaysequence,jdbcType=INTEGER},
       </if>
       <if test="metaTitle != null">
-        Meta_Title = #{metaTitle,jdbcType=NVARCHAR},
+        Meta_Title = #{metaTitle,jdbcType=VARCHAR},
       </if>
       <if test="metaDescription != null">
-        Meta_Description = #{metaDescription,jdbcType=NVARCHAR},
+        Meta_Description = #{metaDescription,jdbcType=VARCHAR},
       </if>
       <if test="metaKeywords != null">
-        Meta_Keywords = #{metaKeywords,jdbcType=NVARCHAR},
+        Meta_Keywords = #{metaKeywords,jdbcType=VARCHAR},
       </if>
       <if test="parentcategoryid != null">
         ParentCategoryId = #{parentcategoryid,jdbcType=INTEGER},
@@ -469,10 +469,10 @@
         Path = #{path,jdbcType=VARCHAR},
       </if>
       <if test="rewritename != null">
-        RewriteName = #{rewritename,jdbcType=NVARCHAR},
+        RewriteName = #{rewritename,jdbcType=VARCHAR},
       </if>
       <if test="skuprefix != null">
-        SKUPrefix = #{skuprefix,jdbcType=NVARCHAR},
+        SKUPrefix = #{skuprefix,jdbcType=VARCHAR},
       </if>
       <if test="associatedproducttype != null">
         AssociatedProductType = #{associatedproducttype,jdbcType=INTEGER},
@@ -484,10 +484,10 @@
         HasChildren = #{haschildren,jdbcType=BIT},
       </if>
       <if test="icon != null">
-        Icon = #{icon,jdbcType=NVARCHAR},
+        Icon = #{icon,jdbcType=VARCHAR},
       </if>
       <if test="bigimageurl != null">
-        BigImageUrl = #{bigimageurl,jdbcType=NVARCHAR},
+        BigImageUrl = #{bigimageurl,jdbcType=VARCHAR},
       </if>
       <if test="tenantid != null">
         TenantID = #{tenantid,jdbcType=INTEGER},
@@ -496,66 +496,66 @@
         guid = #{guid,jdbcType=VARCHAR},
       </if>
       <if test="notes1 != null">
-        Notes1 = #{notes1,jdbcType=LONGNVARCHAR},
+        Notes1 = #{notes1,jdbcType=LONGVARCHAR},
       </if>
       <if test="notes2 != null">
-        Notes2 = #{notes2,jdbcType=LONGNVARCHAR},
+        Notes2 = #{notes2,jdbcType=LONGVARCHAR},
       </if>
       <if test="notes3 != null">
-        Notes3 = #{notes3,jdbcType=LONGNVARCHAR},
+        Notes3 = #{notes3,jdbcType=LONGVARCHAR},
       </if>
       <if test="notes4 != null">
-        Notes4 = #{notes4,jdbcType=LONGNVARCHAR},
+        Notes4 = #{notes4,jdbcType=LONGVARCHAR},
       </if>
       <if test="notes5 != null">
-        Notes5 = #{notes5,jdbcType=LONGNVARCHAR},
+        Notes5 = #{notes5,jdbcType=LONGVARCHAR},
       </if>
     </set>
     where CategoryId = #{categoryid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.ManJiaSonPort.sync.dto.HishopCategoriesWithBLOBs">
     update Hishop_Categories
-    set Name = #{name,jdbcType=NVARCHAR},
+    set Name = #{name,jdbcType=VARCHAR},
       DisplaySequence = #{displaysequence,jdbcType=INTEGER},
-      Meta_Title = #{metaTitle,jdbcType=NVARCHAR},
-      Meta_Description = #{metaDescription,jdbcType=NVARCHAR},
-      Meta_Keywords = #{metaKeywords,jdbcType=NVARCHAR},
+      Meta_Title = #{metaTitle,jdbcType=VARCHAR},
+      Meta_Description = #{metaDescription,jdbcType=VARCHAR},
+      Meta_Keywords = #{metaKeywords,jdbcType=VARCHAR},
       ParentCategoryId = #{parentcategoryid,jdbcType=INTEGER},
       Depth = #{depth,jdbcType=INTEGER},
       Path = #{path,jdbcType=VARCHAR},
-      RewriteName = #{rewritename,jdbcType=NVARCHAR},
-      SKUPrefix = #{skuprefix,jdbcType=NVARCHAR},
+      RewriteName = #{rewritename,jdbcType=VARCHAR},
+      SKUPrefix = #{skuprefix,jdbcType=VARCHAR},
       AssociatedProductType = #{associatedproducttype,jdbcType=INTEGER},
       Theme = #{theme,jdbcType=VARCHAR},
       HasChildren = #{haschildren,jdbcType=BIT},
-      Icon = #{icon,jdbcType=NVARCHAR},
-      BigImageUrl = #{bigimageurl,jdbcType=NVARCHAR},
+      Icon = #{icon,jdbcType=VARCHAR},
+      BigImageUrl = #{bigimageurl,jdbcType=VARCHAR},
       TenantID = #{tenantid,jdbcType=INTEGER},
       guid = #{guid,jdbcType=VARCHAR},
-      Notes1 = #{notes1,jdbcType=LONGNVARCHAR},
-      Notes2 = #{notes2,jdbcType=LONGNVARCHAR},
-      Notes3 = #{notes3,jdbcType=LONGNVARCHAR},
-      Notes4 = #{notes4,jdbcType=LONGNVARCHAR},
-      Notes5 = #{notes5,jdbcType=LONGNVARCHAR}
+      Notes1 = #{notes1,jdbcType=LONGVARCHAR},
+      Notes2 = #{notes2,jdbcType=LONGVARCHAR},
+      Notes3 = #{notes3,jdbcType=LONGVARCHAR},
+      Notes4 = #{notes4,jdbcType=LONGVARCHAR},
+      Notes5 = #{notes5,jdbcType=LONGVARCHAR}
     where CategoryId = #{categoryid,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.ManJiaSonPort.sync.dto.HishopCategories">
     update Hishop_Categories
-    set Name = #{name,jdbcType=NVARCHAR},
+    set Name = #{name,jdbcType=VARCHAR},
       DisplaySequence = #{displaysequence,jdbcType=INTEGER},
-      Meta_Title = #{metaTitle,jdbcType=NVARCHAR},
-      Meta_Description = #{metaDescription,jdbcType=NVARCHAR},
-      Meta_Keywords = #{metaKeywords,jdbcType=NVARCHAR},
+      Meta_Title = #{metaTitle,jdbcType=VARCHAR},
+      Meta_Description = #{metaDescription,jdbcType=VARCHAR},
+      Meta_Keywords = #{metaKeywords,jdbcType=VARCHAR},
       ParentCategoryId = #{parentcategoryid,jdbcType=INTEGER},
       Depth = #{depth,jdbcType=INTEGER},
       Path = #{path,jdbcType=VARCHAR},
-      RewriteName = #{rewritename,jdbcType=NVARCHAR},
-      SKUPrefix = #{skuprefix,jdbcType=NVARCHAR},
+      RewriteName = #{rewritename,jdbcType=VARCHAR},
+      SKUPrefix = #{skuprefix,jdbcType=VARCHAR},
       AssociatedProductType = #{associatedproducttype,jdbcType=INTEGER},
       Theme = #{theme,jdbcType=VARCHAR},
       HasChildren = #{haschildren,jdbcType=BIT},
-      Icon = #{icon,jdbcType=NVARCHAR},
-      BigImageUrl = #{bigimageurl,jdbcType=NVARCHAR},
+      Icon = #{icon,jdbcType=VARCHAR},
+      BigImageUrl = #{bigimageurl,jdbcType=VARCHAR},
       TenantID = #{tenantid,jdbcType=INTEGER},
       guid = #{guid,jdbcType=VARCHAR}
     where CategoryId = #{categoryid,jdbcType=INTEGER}

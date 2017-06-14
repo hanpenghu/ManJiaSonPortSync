@@ -2,9 +2,9 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ManJiaSonPort.sync.dao.mapperJava.HishopSkusMapper">
   <resultMap id="BaseResultMap" type="com.ManJiaSonPort.sync.dto.HishopSkus">
-    <id column="SkuId" jdbcType="NVARCHAR" property="skuid" />
+    <id column="SkuId" jdbcType="VARCHAR" property="skuid" />
     <result column="ProductId" jdbcType="INTEGER" property="productid" />
-    <result column="SKU" jdbcType="NVARCHAR" property="sku" />
+    <result column="SKU" jdbcType="VARCHAR" property="sku" />
     <result column="Weight" jdbcType="DECIMAL" property="weight" />
     <result column="Stock" jdbcType="INTEGER" property="stock" />
     <result column="WarningStock" jdbcType="INTEGER" property="warningstock" />
@@ -94,11 +94,11 @@
     select 
     <include refid="Base_Column_List" />
     from Hishop_SKUs
-    where SkuId = #{skuid,jdbcType=NVARCHAR}
+    where SkuId = #{skuid,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from Hishop_SKUs
-    where SkuId = #{skuid,jdbcType=NVARCHAR}
+    where SkuId = #{skuid,jdbcType=VARCHAR}
   </delete>
   <delete id="deleteByExample" parameterType="com.ManJiaSonPort.sync.dto.HishopSkusExample">
     delete from Hishop_SKUs
@@ -111,7 +111,7 @@
       Weight, Stock, WarningStock, 
       CostPrice, SalePrice, FreezeStock, 
       TenantID, guid)
-    values (#{skuid,jdbcType=NVARCHAR}, #{productid,jdbcType=INTEGER}, #{sku,jdbcType=NVARCHAR}, 
+    values (#{skuid,jdbcType=VARCHAR}, #{productid,jdbcType=INTEGER}, #{sku,jdbcType=VARCHAR}, 
       #{weight,jdbcType=DECIMAL}, #{stock,jdbcType=INTEGER}, #{warningstock,jdbcType=INTEGER}, 
       #{costprice,jdbcType=DECIMAL}, #{saleprice,jdbcType=DECIMAL}, #{freezestock,jdbcType=INTEGER}, 
       #{tenantid,jdbcType=INTEGER}, #{guid,jdbcType=VARCHAR})
@@ -155,13 +155,13 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="skuid != null">
-        #{skuid,jdbcType=NVARCHAR},
+        #{skuid,jdbcType=VARCHAR},
       </if>
       <if test="productid != null">
         #{productid,jdbcType=INTEGER},
       </if>
       <if test="sku != null">
-        #{sku,jdbcType=NVARCHAR},
+        #{sku,jdbcType=VARCHAR},
       </if>
       <if test="weight != null">
         #{weight,jdbcType=DECIMAL},
@@ -199,13 +199,13 @@
     update Hishop_SKUs
     <set>
       <if test="record.skuid != null">
-        SkuId = #{record.skuid,jdbcType=NVARCHAR},
+        SkuId = #{record.skuid,jdbcType=VARCHAR},
       </if>
       <if test="record.productid != null">
         ProductId = #{record.productid,jdbcType=INTEGER},
       </if>
       <if test="record.sku != null">
-        SKU = #{record.sku,jdbcType=NVARCHAR},
+        SKU = #{record.sku,jdbcType=VARCHAR},
       </if>
       <if test="record.weight != null">
         Weight = #{record.weight,jdbcType=DECIMAL},
@@ -238,9 +238,9 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update Hishop_SKUs
-    set SkuId = #{record.skuid,jdbcType=NVARCHAR},
+    set SkuId = #{record.skuid,jdbcType=VARCHAR},
       ProductId = #{record.productid,jdbcType=INTEGER},
-      SKU = #{record.sku,jdbcType=NVARCHAR},
+      SKU = #{record.sku,jdbcType=VARCHAR},
       Weight = #{record.weight,jdbcType=DECIMAL},
       Stock = #{record.stock,jdbcType=INTEGER},
       WarningStock = #{record.warningstock,jdbcType=INTEGER},
@@ -260,7 +260,7 @@
         ProductId = #{productid,jdbcType=INTEGER},
       </if>
       <if test="sku != null">
-        SKU = #{sku,jdbcType=NVARCHAR},
+        SKU = #{sku,jdbcType=VARCHAR},
       </if>
       <if test="weight != null">
         Weight = #{weight,jdbcType=DECIMAL},
@@ -287,12 +287,12 @@
         guid = #{guid,jdbcType=VARCHAR},
       </if>
     </set>
-    where SkuId = #{skuid,jdbcType=NVARCHAR}
+    where SkuId = #{skuid,jdbcType=VARCHAR}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.ManJiaSonPort.sync.dto.HishopSkus">
     update Hishop_SKUs
     set ProductId = #{productid,jdbcType=INTEGER},
-      SKU = #{sku,jdbcType=NVARCHAR},
+      SKU = #{sku,jdbcType=VARCHAR},
       Weight = #{weight,jdbcType=DECIMAL},
       Stock = #{stock,jdbcType=INTEGER},
       WarningStock = #{warningstock,jdbcType=INTEGER},
@@ -301,6 +301,6 @@
       FreezeStock = #{freezestock,jdbcType=INTEGER},
       TenantID = #{tenantid,jdbcType=INTEGER},
       guid = #{guid,jdbcType=VARCHAR}
-    where SkuId = #{skuid,jdbcType=NVARCHAR}
+    where SkuId = #{skuid,jdbcType=VARCHAR}
   </update>
 </mapper>
