@@ -18,7 +18,7 @@ import java.util.List;
 @Component
 public class InsertCategoryService {
     @Autowired
-    InsertCategoryDao insertCategoryDao;
+    private InsertCategoryDao insertCategoryDao;
 /////////////////////////////////////////////////////////////////////////
     public void insertOrUpdateCategory(String categoryJsonString){
         List<HishopCategories> hishopCategories = JSON.parseArray(categoryJsonString, HishopCategories.class);

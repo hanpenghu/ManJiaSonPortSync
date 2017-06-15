@@ -31,9 +31,8 @@ public class GetCategoryJsonArrayStrFromInterface extends AbstractAll {
        super();
     }
     /////////////////////////////////////////////////////////////////////////
-
     /////////////////////////////////////////////////////////////////////////
-    public String getCategoryJsonArrayStrFromInterface() throws Exception {
+    public String getCategoryJsonArrayStrFromInterface() {
         try {
             String strUrl="http://"+mothersIpAndPort+"/category/getAllCategory";
             Map params=new HashMap();
