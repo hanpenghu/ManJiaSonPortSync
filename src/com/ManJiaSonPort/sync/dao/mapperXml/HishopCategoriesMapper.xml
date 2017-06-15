@@ -560,4 +560,8 @@
       guid = #{guid,jdbcType=VARCHAR}
     where CategoryId = #{categoryid,jdbcType=INTEGER}
   </update>
+  <!--hanhan add   ifExsitThisGuid -->
+  <select id="countThisGuid" parameterType="java.lang.String" resultType="java.lang.Integer">
+    SELECT COUNT(guid) FROM Hishop_Categories WHERE guid = #{guid,jdbcType=VARCHAR}
+  </select>
 </mapper>

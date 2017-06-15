@@ -84,7 +84,7 @@
 
 	<!-- 扫描接口分业务用！ -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">  
-  		<property name="basePackage" value="com.ManJia.MainPortInterface.dao.mapperJava" />
+  		<property name="basePackage" value="com.ManJiaSonPort.sync.dao.mapperJava" />
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory1"/>
 	</bean>
 <!-- ==============================================-->

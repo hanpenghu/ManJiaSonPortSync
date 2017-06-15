@@ -34,4 +34,6 @@ public interface HishopCategoriesMapper {
     int updateByPrimaryKeyWithBLOBs(HishopCategoriesWithBLOBs record);
 
     int updateByPrimaryKey(HishopCategories record);
+
+    int countThisGuid(@Param("guid") String guid);
 }
