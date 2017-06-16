@@ -52,13 +52,13 @@ public class GetCategoryJsonArrayStrFromInterface extends AbstractAll {
         return null;
     }
 /////////////////////////////////////////////////////////////////////////
-    public static void main(String[]args) throws Exception {
+    /*public static void main(String[]args) throws Exception {
         String []configs={"classpath*:applicationContext.xml"};
         ApplicationContext ctx = new ClassPathXmlApplicationContext(configs);
         System.out.println(ctx+"---------------------");
         GetCategoryJsonArrayStrFromInterface bean = SpringUtil.getBean(GetCategoryJsonArrayStrFromInterface.class);
 //        System.out.println(bean.getCategoryJsonArrayStrFromInterface());
         FileUtil.writeAsString(new File ("C:\\Users\\Administrator\\Desktop\\11.txt"),bean.getCategoryJsonArrayStrFromInterface());
-    }
+    }*/
     /////////////////////////////////////////////////////////////////////////
 }
