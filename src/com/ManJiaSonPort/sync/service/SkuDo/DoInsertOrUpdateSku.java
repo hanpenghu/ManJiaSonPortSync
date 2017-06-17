@@ -74,13 +74,6 @@ public class DoInsertOrUpdateSku extends AbstractAll {
 
 
 
-    public static void main(String[]args){
-        String []configs={"classpath*:applicationContext.xml"};
-        ApplicationContext ctx = new ClassPathXmlApplicationContext(configs);
-        System.out.println(ctx+"---------------------");
-        DoInsertOrUpdateSku bean = SpringUtil.getBean(DoInsertOrUpdateSku.class);
-        bean.doit();
-    }
 
 
 

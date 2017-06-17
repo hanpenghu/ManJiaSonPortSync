@@ -35,6 +35,12 @@
 <task:annotation-driven executor="executor" scheduler="scheduler" />-->
 
 
+
+
+
+
+
+
 <context:component-scan base-package="com.ManJiaSonPort.sync">
  	<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/><!--排除controller的扫描-->
 </context:component-scan><!-- 使用注解扫描 -->
@@ -113,6 +119,7 @@
 
     <task:scheduled-tasks scheduler="myScheduler">
         <task:scheduled ref="doInsertOrUpdateCategoryUseJsonStr" method="doIt" cron="${timeOfSyncCategory}"/>
+        <task:scheduled ref="doProductAndSku" method="doAll" cron="${timeOfSyncProductThenSku}"/>
     </task:scheduled-tasks>
     <task:scheduler id="myScheduler" pool-size="10"/>
 

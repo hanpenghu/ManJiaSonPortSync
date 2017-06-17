@@ -29,11 +29,6 @@ public class DoInsertOrUpdateCategoryUseJsonStr {
         insertCategoryService.insertOrUpdateCategory(cjsi);
     }
 
-    public static void main(String[]args){
-        String []configs={"classpath*:applicationContext.xml"};
-        ApplicationContext ctx = new ClassPathXmlApplicationContext(configs);
-        System.out.println(ctx+"---------------------");
 
-    }
 
 }
