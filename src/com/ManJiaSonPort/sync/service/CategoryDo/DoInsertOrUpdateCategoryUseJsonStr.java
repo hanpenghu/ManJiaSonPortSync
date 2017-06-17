@@ -17,13 +17,23 @@ public class DoInsertOrUpdateCategoryUseJsonStr {
     GetCategoryJsonArrayStrFromInterface getCategoryJsonArrayStrFromInterface;
     @Autowired
     InsertCategoryService insertCategoryService;
-/////////////////////////////////////////////////////////////////////////
+
+
+
+
     public void doIt(){
         log.info("开始同步商品分类表！！！");
+        System.out.println("开始同步商品分类表！！！");
         String cjsi = getCategoryJsonArrayStrFromInterface.getCategoryJsonArrayStrFromInterface();
+        System.out.println("￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥￥"+cjsi);
         insertCategoryService.insertOrUpdateCategory(cjsi);
     }
-/////////////////////////////////////////////////////////////////////////
+
+    public static void main(String[]args){
+        String []configs={"classpath*:applicationContext.xml"};
+        ApplicationContext ctx = new ClassPathXmlApplicationContext(configs);
+        System.out.println(ctx+"---------------------");
+
+    }
 
 }
-/////////////////////////////////////////////////////////////////////////

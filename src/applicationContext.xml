@@ -112,7 +112,7 @@
 
 
     <task:scheduled-tasks scheduler="myScheduler">
-        <task:scheduled ref="doInsertOrUpdateCategoryUseJsonStr" method="doIt" cron="*/6 * * * * MON-FRI"/>
+        <task:scheduled ref="doInsertOrUpdateCategoryUseJsonStr" method="doIt" cron="${timeOfSyncCategory}"/>
     </task:scheduled-tasks>
     <task:scheduler id="myScheduler" pool-size="10"/>
 

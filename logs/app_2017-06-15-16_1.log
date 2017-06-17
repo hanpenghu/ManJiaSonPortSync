@@ -1,0 +1,5 @@
+06-15-2017 16:50:13.682 ERROR c.M.s.d.InsertCategoryDao [main] 插入分类表的时候,BeanUtils.copyProperties(hcw,hc)有可能复制对象出错！
+06-15-2017 16:50:13.729 ERROR c.M.s.d.InsertCategoryDao [main] 插入分类表的时候,BeanUtils.copyProperties(hcw,hc)有可能复制对象出错！
+06-15-2017 16:58:16.734 ERROR c.M.s.d.InsertCategoryDao [main] 插入分类表的时候,BeanUtils.copyProperties(hcw,hc)有可能复制对象出错！
+06-15-2017 16:58:16.748 ERROR c.M.s.d.InsertCategoryDao [main] 插入分类表的时候,BeanUtils.copyProperties(hcw,hc)有可能复制对象出错！
+06-15-2017 16:58:16.757 ERROR c.M.s.d.InsertCategoryDao [main] 插入分类表的时候,BeanUtils.copyProperties(hcw,hc)有可能复制对象出错！

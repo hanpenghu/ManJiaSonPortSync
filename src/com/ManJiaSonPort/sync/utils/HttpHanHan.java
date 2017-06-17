@@ -20,11 +20,11 @@ public class HttpHanHan {
 	/**
 	 * http连接超时时间
 	 * */
-    public static final int DEF_CONN_TIMEOUT = 30000;
+    public static final int DEF_CONN_TIMEOUT = 50000;
     /**
 	 * http读取时间
 	 * */
-    public static final int DEF_READ_TIMEOUT = 30000;
+    public static final int DEF_READ_TIMEOUT = 50000;
     public static String userAgent =  "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.66 Safari/537.36";
     //配置您申请的KEY
     public static final String APPKEY ="e8d954b7c15ea64ae2c7f153f3b73b1b";

@@ -238,9 +238,7 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update Hishop_SKUs
-    set SkuId = #{record.skuid,jdbcType=VARCHAR},
-      ProductId = #{record.productid,jdbcType=INTEGER},
-      SKU = #{record.sku,jdbcType=VARCHAR},
+    set SKU = #{record.sku,jdbcType=VARCHAR},
       Weight = #{record.weight,jdbcType=DECIMAL},
       Stock = #{record.stock,jdbcType=INTEGER},
       WarningStock = #{record.warningstock,jdbcType=INTEGER},

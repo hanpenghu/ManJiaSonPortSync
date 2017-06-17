@@ -181,7 +181,7 @@
     </if>
   </delete>
   <insert id="insert" parameterType="com.ManJiaSonPort.sync.dto.HishopProductsWithBLOBs">
-    insert into Hishop_Products (ProductId, CategoryId, TypeId, 
+    insert into Hishop_Products (CategoryId, TypeId,
       ProductName, ProductCode, ShortDescription, 
       Unit, Title, Meta_Description, 
       Meta_Keywords, SaleStatus, AddedDate, 
@@ -201,7 +201,7 @@
       AuditStatus, AuditReson, Volume, 
       TenantID, guid, Description, 
       MobbileDescription)
-    values (#{productid,jdbcType=INTEGER}, #{categoryid,jdbcType=INTEGER}, #{typeid,jdbcType=INTEGER}, 
+    values (#{categoryid,jdbcType=INTEGER}, #{typeid,jdbcType=INTEGER},
       #{productname,jdbcType=VARCHAR}, #{productcode,jdbcType=VARCHAR}, #{shortdescription,jdbcType=VARCHAR}, 
       #{unit,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{metaDescription,jdbcType=VARCHAR}, 
       #{metaKeywords,jdbcType=VARCHAR}, #{salestatus,jdbcType=INTEGER}, #{addeddate,jdbcType=TIMESTAMP}, 
@@ -740,8 +740,7 @@
   </update>
   <update id="updateByExampleWithBLOBs" parameterType="map">
     update Hishop_Products
-    set ProductId = #{record.productid,jdbcType=INTEGER},
-      CategoryId = #{record.categoryid,jdbcType=INTEGER},
+    set CategoryId = #{record.categoryid,jdbcType=INTEGER},
       TypeId = #{record.typeid,jdbcType=INTEGER},
       ProductName = #{record.productname,jdbcType=VARCHAR},
       ProductCode = #{record.productcode,jdbcType=VARCHAR},
@@ -751,11 +750,6 @@
       Meta_Description = #{record.metaDescription,jdbcType=VARCHAR},
       Meta_Keywords = #{record.metaKeywords,jdbcType=VARCHAR},
       SaleStatus = #{record.salestatus,jdbcType=INTEGER},
-      AddedDate = #{record.addeddate,jdbcType=TIMESTAMP},
-      UpdateDate = #{record.updatedate,jdbcType=TIMESTAMP},
-      VistiCounts = #{record.visticounts,jdbcType=INTEGER},
-      SaleCounts = #{record.salecounts,jdbcType=INTEGER},
-      ShowSaleCounts = #{record.showsalecounts,jdbcType=INTEGER},
       DisplaySequence = #{record.displaysequence,jdbcType=INTEGER},
       ImageUrl1 = #{record.imageurl1,jdbcType=VARCHAR},
       ImageUrl2 = #{record.imageurl2,jdbcType=VARCHAR},
@@ -1140,4 +1134,13 @@
       guid = #{guid,jdbcType=VARCHAR}
     where ProductId = #{productid,jdbcType=INTEGER}
   </update>
+
+
+  <!--hanhan add   ifExsitThisGuid -->
+  <select id="countThisGuid" parameterType="java.lang.String" resultType="java.lang.Integer">
+    SELECT COUNT(guid) FROM Hishop_Products WHERE guid = #{guid,jdbcType=VARCHAR}
+  </select>
+
+
+
 </mapper>

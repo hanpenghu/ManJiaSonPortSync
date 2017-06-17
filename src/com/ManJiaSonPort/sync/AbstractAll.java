@@ -17,7 +17,7 @@ public abstract class  AbstractAll {
     public String mothersIpAndPort="127.0.0.1:8080";
     public String key="key1";
     public String secret="secret1";
-
+    public int perCountOfGetFromGuidList=50;
     public AbstractAll() {
         try {
             String rootPath= PathUtils.getSrcPath(AbstractAll.class);
@@ -26,6 +26,7 @@ public abstract class  AbstractAll {
             this.mothersIpAndPort= pro.getProperty("mothersIpAndPort");
             this.secret=pro.getProperty("secret");
             this.key=pro.getProperty("key");
+           this.perCountOfGetFromGuidList=Integer.parseInt(pro.getProperty("perCountOfGetFromGuidList"));
         } catch (IOException e) {
             log.error("读取dataSource.properties失败！！---------------");
         }

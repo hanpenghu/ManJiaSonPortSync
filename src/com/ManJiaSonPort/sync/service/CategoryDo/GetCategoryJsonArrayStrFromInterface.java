@@ -40,7 +40,7 @@ public class GetCategoryJsonArrayStrFromInterface extends AbstractAll {
 
             String requestMethod="getAllCategory";
             String formatDate=new SimpleDateFormat("yyyy_MM_dd").format(new Date());
-            String validate = MD5Utils.generatePassword(requestMethod+formatDate+"key1"+secret);
+            String validate = MD5Utils.generatePassword(requestMethod+formatDate+key+secret);
 
             params.put("validate",validate);
             String sendMethod="POST";
@@ -52,13 +52,6 @@ public class GetCategoryJsonArrayStrFromInterface extends AbstractAll {
         return null;
     }
 /////////////////////////////////////////////////////////////////////////
-    /*public static void main(String[]args) throws Exception {
-        String []configs={"classpath*:applicationContext.xml"};
-        ApplicationContext ctx = new ClassPathXmlApplicationContext(configs);
-        System.out.println(ctx+"---------------------");
-        GetCategoryJsonArrayStrFromInterface bean = SpringUtil.getBean(GetCategoryJsonArrayStrFromInterface.class);
-//        System.out.println(bean.getCategoryJsonArrayStrFromInterface());
-        FileUtil.writeAsString(new File ("C:\\Users\\Administrator\\Desktop\\11.txt"),bean.getCategoryJsonArrayStrFromInterface());
-    }*/
+
     /////////////////////////////////////////////////////////////////////////
 }
