@@ -3,36 +3,41 @@
 ----满嘉主站修改,商品表,规格表,分类表,增加2个字段,TenantID代表那个站点的
 ----guid代表该商品全球唯一标识
 --修改分类表
-alter table Hishop_Categories add TenantID int default 0-----母站设为0---子站不能设为0,设为其他
+------------------------------=========================!!!!!!!!!!
+alter table Hishop_Categories add TenantID int default 1-----母站设为0---子站不能设为0,设为其他
 go
 alter table Hishop_Categories add guid varchar(40) default NEWID()----字母都这样做
 go
 ----初始化上面加的2个字段的值
-update Hishop_Categories set TenantID=0---此为满嘉主站代号,设为0(0代表满嘉主站)
+------------------------------=========================!!!!!!!!!!
+update Hishop_Categories set TenantID=1---此为满嘉主站代号,设为0(0代表满嘉主站)
 go
 update Hishop_Categories set guid=NEWID()----设置分类全球唯一标识符
 go
 -----------------------------------------------------------------------------------------
 ---修改满嘉商品表
-alter table Hishop_Products add TenantID int default 0
+------------------------------=========================!!!!!!!!!!
+alter table Hishop_Products add TenantID int default 1     ---1是某个子站的代号
 GO
 alter table Hishop_Products add guid varchar(40) default NEWID()
 GO
 ----初始化上面加的2个字段的值
-update Hishop_Products set TenantID=0---此为满嘉主站代号,设为0(0代表满嘉主站)
+------------------------------=========================!!!!!!!!!!
+update Hishop_Products set TenantID=1---此为满嘉主站代号,设为0(0代表满嘉主站)
 GO
 update Hishop_Products set guid=NEWID()----设置分类全球唯一标识符
 GO
 -----------------------------------------------------------------------------------------
 -----修改商品规格表，该表有点特殊,必须在该表对应的productid对应的guid跟商品表一样
----修改满嘉商品表
-alter table Hishop_SKUs add TenantID int default 0
+------------------------------=========================!!!!!!!!!!
+alter table Hishop_SKUs add TenantID int default 1
 GO
-alter table Hishop_SKUs add guid varchar(40) default NEWID()
+alter table Hishop_SKUs add guid varchar(40) default NULL---这个弄成null是因为将来存储和触发器会自动从商品表取值,这个null可以区分没有取值的
 GO
-update Hishop_SKUs set TenantID=0---此为满嘉主站代号,设为0(0代表满嘉主站)
+------------------------------=========================!!!!!!!!!!
+update Hishop_SKUs set TenantID=1---此为满嘉zi站代号,设为1(0代表满嘉主站)
 GO
------商品表必须跟规格表的唯一标识符guid相同,用存储实现(把商品表productid对应的guid迁移到规格表中)
+-----规格表必须跟商品表的唯一标识符guid相同,用存储实现(把商品表productid对应到guid迁移到规格表中)
 CREATE PROCEDURE make_Hishop_SKUs_Hishop_Products_have_same_guid
   as
 	declare @i int
@@ -50,7 +55,7 @@ go
 EXECUTE make_Hishop_SKUs_Hishop_Products_have_same_guid
 go
 ------------------------------------------------------------------------------------------------
----创建触发器,当规格表中增加一条数据的时候,对规格表中的TenantID(站点区分字段)和guid自动赋值
+---创建触发器,当规格表中增加一条数据的时候,对规格表中的guid自动赋值,该guid来自对应product表的guid
 ----主站点tenantID(站点区分字段) 为0,guid(商品全球唯一标识)必须跟商品表保持一致,(该触发器主要是为了吧原来的规格表中的guid替换成商品表的guid)
 Create Trigger insert_guid_from_Hishop_Products_to_Hishop_SKUs
 On Hishop_SKUs
@@ -62,3 +67,4 @@ begin
      update Hishop_SKUs set guid=(select guid FROM Hishop_Products where ProductId=@ProductId)where ProductId=@ProductId
 end
 
+GO
