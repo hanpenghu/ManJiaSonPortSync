@@ -301,4 +301,11 @@
       guid = #{guid,jdbcType=VARCHAR}
     where SkuId = #{skuid,jdbcType=VARCHAR}
   </update>
+
+  <!--hanhan add   ifExsitThisGuid -->
+  <select id="countThisGuid" parameterType="java.lang.String" resultType="java.lang.Integer">
+    SELECT COUNT(guid) FROM Hishop_SKUs WHERE guid = #{guid,jdbcType=VARCHAR}
+  </select>
+
+
 </mapper>

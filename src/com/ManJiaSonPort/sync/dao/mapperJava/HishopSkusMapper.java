@@ -27,4 +27,6 @@ public interface HishopSkusMapper {
     int updateByPrimaryKeySelective(HishopSkus record);
 
     int updateByPrimaryKey(HishopSkus record);
+
+    int countThisGuid(@Param("guid") String guid);
 }

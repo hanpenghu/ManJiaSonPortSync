@@ -44,7 +44,7 @@ public class GetProductJsonArrayStrFromInterface extends AbstractAll {
             String productJsonArrayStr = HttpHanHan.net(strUrl, params, sendMethod);
             return productJsonArrayStr;
         } catch (Exception e) {
-            log.error("获取母站分类表异常-----------------");
+            log.error("获取母站商品异常-----------------");
         }
         return null;
     }
